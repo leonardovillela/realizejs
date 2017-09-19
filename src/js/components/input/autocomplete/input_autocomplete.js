@@ -47,6 +47,10 @@ export default class InputAutocomplete extends InputBase {
     value: this.ensureIsArray(this.props.value),
   };
 
+  componentWillReceiveProps(nextProps) {
+    this.setState({ loadParams: Object.assign({}, this.state.loadParams, nextProps.loadParams) });
+  }
+
   componentWillMount() {
     this.state.loadParams[this.props.maxOptionsParam] = this.props.maxOptions;
   }

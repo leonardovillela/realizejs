@@ -42,7 +42,7 @@ export default {
       optionsCache: this.props.options,
       disabled: this.props.disabled,
       mustDisable: false,
-      loadParams: {},
+      loadParams: this.props.loadParams,
       loadData: [],
       hasPendingRequest: false,
     };
