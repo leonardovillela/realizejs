@@ -1,7 +1,9 @@
+var PropTypes = require('prop-types');
+
 window.LocalizedResourceFieldMixin = {
   propTypes: {
-    resource: React.PropTypes.string,
-    name: React.PropTypes.string
+    resource: PropTypes.string,
+    name: PropTypes.string
   },
 
   localizeResourceField: function(name, resource) {

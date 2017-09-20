@@ -1,11 +1,13 @@
+var PropTypes = require('prop-types');
+
 window.UpdatePermissionsButton = React.createClass({
 
   PropTypes: {
-    name: React.PropTypes.string,
-    className: React.PropTypes.string,
-    clearTheme: React.PropTypes.bool,
-    element: React.PropTypes.string,
-    handleUpdatePermissions: React.PropTypes.func
+    name: PropTypes.string,
+    className: PropTypes.string,
+    clearTheme: PropTypes.bool,
+    element: PropTypes.string,
+    handleUpdatePermissions: PropTypes.func
   },
 
   getDefaultProps: function() {

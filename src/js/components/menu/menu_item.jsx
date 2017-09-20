@@ -1,13 +1,15 @@
+var PropTypes = require('prop-types');
+
 window.MenuItem = React.createClass({
   propTypes: {
-    icon: React.PropTypes.string,
-    iconAlign: React.PropTypes.string,
-    href: React.PropTypes.string,
-    target: React.PropTypes.string,
-    onClick: React.PropTypes.object,
-    className: React.PropTypes.string,
-    method: React.PropTypes.string,
-    element: React.PropTypes.string
+    icon: PropTypes.string,
+    iconAlign: PropTypes.string,
+    href: PropTypes.string,
+    target: PropTypes.string,
+    onClick: PropTypes.object,
+    className: PropTypes.string,
+    method: PropTypes.string,
+    element: PropTypes.string
   },
 
   getDefaultProps: function() {

@@ -1,9 +1,11 @@
+var PropTypes = require('prop-types');
+
 window.InputAutocompleteValues = React.createClass({
   propTypes: {
-    id: React.PropTypes.string,
-    name: React.PropTypes.string,
-    multiple: React.PropTypes.bool,
-    selectedOptions: React.PropTypes.array
+    id: PropTypes.string,
+    name: PropTypes.string,
+    multiple: PropTypes.bool,
+    selectedOptions: PropTypes.array
   },
 
   getDefaultProps: function() {

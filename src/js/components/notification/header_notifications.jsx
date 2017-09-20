@@ -1,10 +1,12 @@
+var PropTypes = require('prop-types');
+
 window.HeaderNotifications = React.createClass({
   propTypes: {
-    ouSlug: React.PropTypes.string,
-    className: React.PropTypes.string,
-    text: React.PropTypes.string,
-    icon: React.PropTypes.string,
-    baseUrl: React.PropTypes.string
+    ouSlug: PropTypes.string,
+    className: PropTypes.string,
+    text: PropTypes.string,
+    icon: PropTypes.string,
+    baseUrl: PropTypes.string
   },
 
   getDefaultProps: function() {
@@ -125,8 +127,8 @@ window.HeaderNotifications = React.createClass({
 
 var NotificationNumber= React.createClass({
   propTypes: {
-    className: React.PropTypes.string,
-    count: React.PropTypes.number
+    className: PropTypes.string,
+    count: PropTypes.number
   },
 
   getDefaultProps: function(){

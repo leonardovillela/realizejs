@@ -1,7 +1,7 @@
 window.FormSuccessHandlerMixin = {
   propTypes: {
-    onSuccess: React.PropTypes.func,
-    successMessage: React.PropTypes.string
+    onSuccess: PropTypes.func,
+    successMessage: PropTypes.string
   },
 
   getDefaultProps: function() {

@@ -5,18 +5,18 @@ window.PermissionManagerModal = React.createClass({
   mixins: [RequestHandlerMixin],
 
   PropTypes: {
-    permissionManagerInModal: React.PropTypes.bool,
-    principal: React.PropTypes.object,
-    principalType: React.PropTypes.string,
-    resource: React.PropTypes.object,
-    resourceType: React.PropTypes.string,
-    className: React.PropTypes.string,
-    modalId: React.PropTypes.string,
-    updatePermissionsBaseUrl: React.PropTypes.string,
-    principalsBaseUrl: React.PropTypes.string,
-    principalsPermissionsBaseUrl: React.PropTypes.string,
-    title: React.PropTypes.string,
-    reloadPageAfterSubmit: React.PropTypes.bool
+    permissionManagerInModal: PropTypes.bool,
+    principal: PropTypes.object,
+    principalType: PropTypes.string,
+    resource: PropTypes.object,
+    resourceType: PropTypes.string,
+    className: PropTypes.string,
+    modalId: PropTypes.string,
+    updatePermissionsBaseUrl: PropTypes.string,
+    principalsBaseUrl: PropTypes.string,
+    principalsPermissionsBaseUrl: PropTypes.string,
+    title: PropTypes.string,
+    reloadPageAfterSubmit: PropTypes.bool
   },
 
   getDefaultProps: function() {

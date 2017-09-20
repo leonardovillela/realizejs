@@ -1,16 +1,17 @@
+var PropTypes = require('prop-types');
 var RequestHandlerMixin = require('realize/mixins/request_handler_mixin.jsx');
 
 window.AclModalsWrapper = React.createClass({
   mixins: [RequestHandlerMixin],
 
   PropTypes: {
-    principal: React.PropTypes.object,
-    principalType: React.PropTypes.string,
-    resource: React.PropTypes.object,
-    resourceType: React.PropTypes.string,
-    urlProps: React.PropTypes.object,
-    title: React.PropTypes.string,
-    reloadPageAfterSubmit: React.PropTypes.bool
+    principal: PropTypes.object,
+    principalType: PropTypes.string,
+    resource: PropTypes.object,
+    resourceType: PropTypes.string,
+    urlProps: PropTypes.object,
+    title: PropTypes.string,
+    reloadPageAfterSubmit: PropTypes.bool
   },
 
   getDefaultProps: function() {

@@ -1,9 +1,9 @@
 window.FormErrorHandlerMixin = {
   propTypes: {
-    errorMessage: React.PropTypes.string,
-    baseErrorParam: React.PropTypes.string,
-    onError: React.PropTypes.func,
-    mapping: React.PropTypes.bool
+    errorMessage: PropTypes.string,
+    baseErrorParam: PropTypes.string,
+    onError: PropTypes.func,
+    mapping: PropTypes.bool
   },
 
   getDefaultProps: function() {

@@ -1,6 +1,8 @@
+var PropTypes = require('prop-types');
+
 window.ModalRendererMixin = {
   propTypes: {
-    modalContainerId: React.PropTypes.string
+    modalContainerId: PropTypes.string
   },
 
   getDefaultProps: function() {

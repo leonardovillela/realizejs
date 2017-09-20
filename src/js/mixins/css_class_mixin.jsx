@@ -1,8 +1,8 @@
 window.CssClassMixin = {
   propTypes: {
-    clearTheme: React.PropTypes.bool,
-    className: React.PropTypes.string,
-    themeClassKey: React.PropTypes.string
+    clearTheme: PropTypes.bool,
+    className: PropTypes.string,
+    themeClassKey: PropTypes.string
   },
 
   getDefaultProps: function() {

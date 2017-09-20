@@ -1,7 +1,7 @@
 window.CheckboxComponentMixin = {
   propTypes: {
-    checked: React.PropTypes.bool,
-    renderAsIndeterminate: React.PropTypes.bool
+    checked: PropTypes.bool,
+    renderAsIndeterminate: PropTypes.bool
   },
 
   getDefaultProps: function() {

@@ -1,8 +1,10 @@
+var PropTypes = require('prop-types');
+
 window.TooltipMixin = {
   propTypes: {
-    tooltipDelay: React.PropTypes.number,
-    tooltipText: React.PropTypes.string,
-    tooltipPosition: React.PropTypes.oneOf(['bottom', 'top', 'left', 'right'])
+    tooltipDelay: PropTypes.number,
+    tooltipText: PropTypes.string,
+    tooltipPosition: PropTypes.oneOf(['bottom', 'top', 'left', 'right'])
   },
 
   getDefaultProps: function() {

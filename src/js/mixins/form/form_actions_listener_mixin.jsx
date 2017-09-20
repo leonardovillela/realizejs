@@ -1,9 +1,9 @@
 window.FormActionsListenerMixin = {
   propTypes: {
-    onFormSubmit: React.PropTypes.func,
-    onFormSuccess: React.PropTypes.func,
-    onFormError: React.PropTypes.func,
-    onFormReset: React.PropTypes.func
+    onFormSubmit: PropTypes.func,
+    onFormSuccess: PropTypes.func,
+    onFormError: PropTypes.func,
+    onFormReset: PropTypes.func
   },
 
   getDefaultProps: function() {

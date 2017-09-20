@@ -1,7 +1,9 @@
+var PropTypes = require('prop-types');
+
 window.LabelPermission = React.createClass({
 
   PropTypes: {
-    className: React.PropTypes.string
+    className: PropTypes.string
   },
 
   getDefaultProps: function() {

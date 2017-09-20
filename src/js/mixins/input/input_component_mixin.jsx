@@ -1,14 +1,16 @@
+var PropTypes = require('prop-types');
+
 window.InputComponentMixin = {
   propTypes: {
-    id: React.PropTypes.string,
-    name: React.PropTypes.string,
-    value: React.PropTypes.any,
-    disabled: React.PropTypes.bool,
-    readOnly: React.PropTypes.bool,
+    id: PropTypes.string,
+    name: PropTypes.string,
+    value: PropTypes.any,
+    disabled: PropTypes.bool,
+    readOnly: PropTypes.bool,
     placeholder: Realize.PropTypes.localizedString,
-    errors: React.PropTypes.oneOfType([React.PropTypes.object, React.PropTypes.array]),
-    onChange: React.PropTypes.func,
-    onFocus: React.PropTypes.func
+    errors: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+    onChange: PropTypes.func,
+    onFocus: PropTypes.func
   },
 
   getDefaultProps: function() {

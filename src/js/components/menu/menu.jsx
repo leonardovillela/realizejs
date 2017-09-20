@@ -1,9 +1,11 @@
+var PropTypes = require('prop-types');
+
 // TODO: [DEPRECATION] Prop ref_id is deprecated, remember to remove it.
 window.Menu = React.createClass({
   propTypes: {
-    ref_id: React.PropTypes.string,
-    id: React.PropTypes.string,
-    items: React.PropTypes.array
+    ref_id: PropTypes.string,
+    id: PropTypes.string,
+    items: PropTypes.array
   },
 
   getDefaultProps: function() {

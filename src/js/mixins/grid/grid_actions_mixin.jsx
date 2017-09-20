@@ -3,14 +3,14 @@ var _isArray = require('lodash/isArray');
 
 window.GridActionsMixin = {
   propTypes: {
-    actionButtons: React.PropTypes.object,
-    rowHref: React.PropTypes.string,
-    haveShowAction: React.PropTypes.bool,
+    actionButtons: PropTypes.object,
+    rowHref: PropTypes.string,
+    haveShowAction: PropTypes.bool,
 
-    createActionButton: React.PropTypes.object,
-    showActionButton: React.PropTypes.object,
-    editActionButton: React.PropTypes.object,
-    destroyActionButton: React.PropTypes.object
+    createActionButton: PropTypes.object,
+    showActionButton: PropTypes.object,
+    editActionButton: PropTypes.object,
+    destroyActionButton: PropTypes.object
   },
 
   getDefaultProps: function() {

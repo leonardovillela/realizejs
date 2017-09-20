@@ -1,10 +1,10 @@
 window.CloseModalButton = React.createClass({
   PropTypes: {
-    name: React.PropTypes.string,
-    className: React.PropTypes.string,
-    clearTheme: React.PropTypes.bool,
-    element: React.PropTypes.string,
-    modalId: React.PropTypes.string
+    name: PropTypes.string,
+    className: PropTypes.string,
+    clearTheme: PropTypes.bool,
+    element: PropTypes.string,
+    modalId: PropTypes.string
   },
 
   getDefaultProps: function() {

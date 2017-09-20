@@ -1,19 +1,20 @@
+var PropTypes = require('prop-types');
 var utils = require('../../utils.js');
 var _map = require('lodash/map');
 
 window.SelectComponentMixin = {
   propTypes: {
-    options: React.PropTypes.array,
-    dependsOn: React.PropTypes.object,
-    optionsUrl: React.PropTypes.string,
-    optionsParam: React.PropTypes.string,
-    nameField: React.PropTypes.string,
-    valueField: React.PropTypes.string,
-    multiple: React.PropTypes.bool,
-    onLoad: React.PropTypes.func,
-    onLoadError: React.PropTypes.func,
-    onSelect: React.PropTypes.func,
-    requestTimeout: React.PropTypes.number
+    options: PropTypes.array,
+    dependsOn: PropTypes.object,
+    optionsUrl: PropTypes.string,
+    optionsParam: PropTypes.string,
+    nameField: PropTypes.string,
+    valueField: PropTypes.string,
+    multiple: PropTypes.bool,
+    onLoad: PropTypes.func,
+    onLoadError: PropTypes.func,
+    onSelect: PropTypes.func,
+    requestTimeout: PropTypes.number
   },
 
   getDefaultProps: function() {

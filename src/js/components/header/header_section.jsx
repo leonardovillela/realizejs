@@ -1,7 +1,9 @@
+var PropTypes = require('prop-types');
+
 window.HeaderSection = React.createClass({
   propTypes: {
-    align: React.PropTypes.string,
-    id: React.PropTypes.string
+    align: PropTypes.string,
+    id: PropTypes.string
   },
 
   getDefaultProps: function() {

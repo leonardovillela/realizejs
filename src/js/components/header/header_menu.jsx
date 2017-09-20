@@ -1,12 +1,12 @@
 window.HeaderMenu = React.createClass({
 
   propTypes: {
-    items: React.PropTypes.array,
-    leftIcon: React.PropTypes.string,
-    rightIcon: React.PropTypes.string,
-    text: React.PropTypes.string,
-    href: React.PropTypes.string,
-    ref_id:React.PropTypes.string
+    items: PropTypes.array,
+    leftIcon: PropTypes.string,
+    rightIcon: PropTypes.string,
+    text: PropTypes.string,
+    href: PropTypes.string,
+    ref_id:PropTypes.string
   },
 
   getDefaultProps: function() {

@@ -1,15 +1,15 @@
 window.HeaderButton = React.createClass({
 
   propTypes: {
-    imgSrc: React.PropTypes.string,
-    imgAlt: React.PropTypes.string,
-    icon: React.PropTypes.string,
-    iconAlign: React.PropTypes.string,
-    text: React.PropTypes.string,
-    href: React.PropTypes.string,
-    target: React.PropTypes.string,
-    onClick: React.PropTypes.func,
-    ref: React.PropTypes.string
+    imgSrc: PropTypes.string,
+    imgAlt: PropTypes.string,
+    icon: PropTypes.string,
+    iconAlign: PropTypes.string,
+    text: PropTypes.string,
+    href: PropTypes.string,
+    target: PropTypes.string,
+    onClick: PropTypes.func,
+    ref: PropTypes.string
   },
 
   getDefaultProps: function() {

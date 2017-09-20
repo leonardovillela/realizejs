@@ -1,10 +1,12 @@
+var PropTypes = require('prop-types');
+
 window.Spinner = React.createClass({
 
   propTypes: {
-    size: React.PropTypes.string,
-    color: React.PropTypes.string,
-    active: React.PropTypes.bool,
-    className: React.PropTypes.string
+    size: PropTypes.string,
+    color: PropTypes.string,
+    active: PropTypes.bool,
+    className: PropTypes.string
   },
 
   getDefaultProps: function() {

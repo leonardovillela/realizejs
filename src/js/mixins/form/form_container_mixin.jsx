@@ -1,7 +1,7 @@
 window.FormContainerMixin = {
   propTypes: {
-    errors: React.PropTypes.oneOfType([React.PropTypes.object, React.PropTypes.array]),
-    errorThemeClassKey: React.PropTypes.string
+    errors: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+    errorThemeClassKey: PropTypes.string
   },
 
   getDefaultProps: function() {

@@ -1,7 +1,9 @@
+var PropTypes = require('prop-types');
+
 window.InputSelectOption = React.createClass({
   propTypes: {
-    name: React.PropTypes.string,
-    value: React.PropTypes.node
+    name: PropTypes.string,
+    value: PropTypes.node
   },
 
   render: function() {

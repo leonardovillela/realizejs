@@ -4,12 +4,12 @@ window.AddPrincipalsModal = React.createClass({
   mixins: [RequestHandlerMixin],
 
   PropTypes: {
-    resource: React.PropTypes.object,
-    resourceType: React.PropTypes.string,
-    className: React.PropTypes.string,
-    modalId: React.PropTypes.string,
-    potentialPrincipalsBaseUrl: React.PropTypes.string,
-    principalsTypeBaseUrl: React.PropTypes.string
+    resource: PropTypes.object,
+    resourceType: PropTypes.string,
+    className: PropTypes.string,
+    modalId: PropTypes.string,
+    potentialPrincipalsBaseUrl: PropTypes.string,
+    principalsTypeBaseUrl: PropTypes.string
   },
 
   getDefaultProps: function() {

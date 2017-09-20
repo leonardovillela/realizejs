@@ -1,9 +1,11 @@
+var PropTypes = require('prop-types');
+
 window.RequestHandlerMixin = {
   propTypes: {
-    onRequest: React.PropTypes.func,
-    onSuccess: React.PropTypes.func,
-    onError: React.PropTypes.func,
-    onComplete: React.PropTypes.func
+    onRequest: PropTypes.func,
+    onSuccess: PropTypes.func,
+    onError: PropTypes.func,
+    onComplete: PropTypes.func
   },
 
   current_xhr: null,

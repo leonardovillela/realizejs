@@ -1,10 +1,11 @@
+var PropTypes = require('prop-types');
 var _merge = require('lodash/merge');
 
 window.RestActionsMixin = {
   propTypes: {
-    actionUrls: React.PropTypes.object,
-    actionMethods: React.PropTypes.object,
-    destroyConfirm: React.PropTypes.node
+    actionUrls: PropTypes.object,
+    actionMethods: PropTypes.object,
+    destroyConfirm: PropTypes.node
   },
 
   getDefaultProps: function() {
