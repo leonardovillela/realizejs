@@ -1,5 +1,5 @@
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
-var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
+var ReactCSSTransitionGroup = require('react-transition-group');
 
 window.Flash = React.createClass({
   mixins: [CssClassMixin],
