@@ -1,4 +1,5 @@
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
+var PropTypes = require('prop-types');
 var ContainerMixin = require('realize/mixins/container_mixin.jsx');
 
 window.ModalForm = React.createClass({
@@ -8,8 +9,8 @@ window.ModalForm = React.createClass({
   ],
 
   propTypes: {
-    title: React.PropTypes.string,
-    form: React.PropTypes.object
+    title: PropTypes.string,
+    form: PropTypes.object
   },
 
   getDefaultProps: function() {

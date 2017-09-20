@@ -1,4 +1,5 @@
 var RequestHandlerMixin = require('realize/mixins/request_handler_mixin.jsx');
+var PropTypes = require('prop-types');
 var ModalRendererMixin = require('realize/mixins/modal_renderer_mixin.jsx');
 var moment = require('moment');
 
@@ -6,11 +7,11 @@ window.NotificationsList = React.createClass({
   mixins: [RequestHandlerMixin, ModalRendererMixin],
 
   propTypes: {
-    className: React.PropTypes.string,
-    active: React.PropTypes.bool,
-    notifications: React.PropTypes.array,
-    handleClickItem: React.PropTypes.func,
-    baseUrl: React.PropTypes.string
+    className: PropTypes.string,
+    active: PropTypes.bool,
+    notifications: PropTypes.array,
+    handleClickItem: PropTypes.func,
+    baseUrl: PropTypes.string
   },
 
   getDefaultProps: function() {

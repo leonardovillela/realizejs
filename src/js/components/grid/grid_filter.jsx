@@ -1,19 +1,20 @@
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.GridFilter = React.createClass({
   mixins: [CssClassMixin],
   propTypes: {
-    inputs: React.PropTypes.object,
-    action: React.PropTypes.string,
-    method: React.PropTypes.string,
-    submitButton: React.PropTypes.object,
-    clearButton: React.PropTypes.object,
-    onSuccess: React.PropTypes.func,
-    onError: React.PropTypes.func,
-    onSubmit: React.PropTypes.func,
-    onReset: React.PropTypes.func,
-    isLoading: React.PropTypes.bool,
-    collapsible: React.PropTypes.bool
+    inputs: PropTypes.object,
+    action: PropTypes.string,
+    method: PropTypes.string,
+    submitButton: PropTypes.object,
+    clearButton: PropTypes.object,
+    onSuccess: PropTypes.func,
+    onError: PropTypes.func,
+    onSubmit: PropTypes.func,
+    onReset: PropTypes.func,
+    isLoading: PropTypes.bool,
+    collapsible: PropTypes.bool
   },
 
   getDefaultProps: function() {

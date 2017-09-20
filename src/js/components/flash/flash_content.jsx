@@ -1,13 +1,14 @@
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.FlashContent = React.createClass({
  mixins: [CssClassMixin],
  propTypes: {
-   type: React.PropTypes.string,
-   message: React.PropTypes.oneOfType([
-     React.PropTypes.element,
-     React.PropTypes.string,
-     React.PropTypes.array
+   type: PropTypes.string,
+   message: PropTypes.oneOfType([
+     PropTypes.element,
+     PropTypes.string,
+     PropTypes.array
    ])
  },
 

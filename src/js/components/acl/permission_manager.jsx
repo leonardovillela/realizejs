@@ -1,3 +1,4 @@
+var PropTypes = require('prop-types');
 var RequestHandlerMixin = require('realize/mixins/request_handler_mixin.jsx');
 var UtilsMixin = require('realize/mixins/utils_mixin.jsx');
 
@@ -7,16 +8,16 @@ window.PermissionManager = React.createClass({
   ////// SPECIFICATIONS //////
 
   PropTypes: {
-    principal: React.PropTypes.object,
-    principalType: React.PropTypes.string,
-    resource: React.PropTypes.object,
-    resourceType: React.PropTypes.string,
-    PrincipalGridProps: React.PropTypes.object,
-    permissionManagerInModal: React.PropTypes.bool,
-    principalsBaseUrl: React.PropTypes.string,
-    principalsPermissionsBaseUrl: React.PropTypes.string,
-    impliesPermissionBaseUrl: React.PropTypes.string,
-    permissionsBaseUrl: React.PropTypes.string
+    principal: PropTypes.object,
+    principalType: PropTypes.string,
+    resource: PropTypes.object,
+    resourceType: PropTypes.string,
+    PrincipalGridProps: PropTypes.object,
+    permissionManagerInModal: PropTypes.bool,
+    principalsBaseUrl: PropTypes.string,
+    principalsPermissionsBaseUrl: PropTypes.string,
+    impliesPermissionBaseUrl: PropTypes.string,
+    permissionsBaseUrl: PropTypes.string
   },
 
   getDefaultProps: function() {

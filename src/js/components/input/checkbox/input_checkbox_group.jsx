@@ -1,3 +1,4 @@
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var InputComponentMixin = require('realize/mixins/input/input_component_mixin.jsx');
 var SelectComponentMixin = require('realize/mixins/input/select_component_mixin.jsx');
@@ -10,9 +11,9 @@ window.InputCheckboxGroup = React.createClass({
   ],
 
   propTypes: {
-    name: React.PropTypes.string,
-    align: React.PropTypes.oneOf(['vertical', 'horizontal']),
-    currentValues: React.PropTypes.string
+    name: PropTypes.string,
+    align: PropTypes.oneOf(['vertical', 'horizontal']),
+    currentValues: PropTypes.string
   },
 
   getDefaultProps: function() {

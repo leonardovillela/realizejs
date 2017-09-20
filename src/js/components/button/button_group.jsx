@@ -1,9 +1,10 @@
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.ButtonGroup = React.createClass({
   mixins: [CssClassMixin],
   propTypes: {
-    buttons: React.PropTypes.array
+    buttons: PropTypes.array
   },
 
   getDefaultProps: function() {

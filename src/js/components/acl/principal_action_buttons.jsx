@@ -1,13 +1,14 @@
 var RequestHandlerMixin = require('realize/mixins/request_handler_mixin.jsx');
+var PropTypes = require('prop-types');
 var ModalRendererMixin = require('realize/mixins/modal_renderer_mixin.jsx');
 
 window.PrincipalActionButtons = React.createClass({
   mixins: [RequestHandlerMixin, ModalRendererMixin],
 
   PropTypes: {
-    className: React.PropTypes.string,
-    handleOpenPrincipalModal: React.PropTypes.func,
-    handleRemovePrincipal: React.PropTypes.func
+    className: PropTypes.string,
+    handleOpenPrincipalModal: PropTypes.func,
+    handleRemovePrincipal: PropTypes.func
   },
 
   getDefaultProps: function() {

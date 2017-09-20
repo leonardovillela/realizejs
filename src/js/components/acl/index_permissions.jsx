@@ -1,15 +1,16 @@
 var RequestHandlerMixin = require('realize/mixins/request_handler_mixin.jsx');
+var PropTypes = require('prop-types');
 var ModalRendererMixin = require('realize/mixins/modal_renderer_mixin.jsx');
 
 window.IndexPermissions = React.createClass({
   mixins: [RequestHandlerMixin, ModalRendererMixin],
 
   PropTypes: {
-    principal: React.PropTypes.object,
-    resourceType: React.PropTypes.string,
-    gridProps: React.PropTypes.object,
-    className: React.PropTypes.string,
-    editPermissionBaseUrl: React.PropTypes.object
+    principal: PropTypes.object,
+    resourceType: PropTypes.string,
+    gridProps: PropTypes.object,
+    className: PropTypes.string,
+    editPermissionBaseUrl: PropTypes.object
   },
 
   getDefaultProps: function() {

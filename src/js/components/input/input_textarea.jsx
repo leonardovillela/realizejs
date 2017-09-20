@@ -1,10 +1,11 @@
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var InputComponentMixin = require('realize/mixins/input/input_component_mixin.jsx');
 
 window.InputTextarea = React.createClass({
   mixins: [CssClassMixin, InputComponentMixin],
   propTypes: {
-    rows: React.PropTypes.number
+    rows: PropTypes.number
   },
 
   getDefaultProps: function() {

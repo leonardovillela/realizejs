@@ -1,4 +1,5 @@
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
+var PropTypes = require('prop-types');
 var ContainerMixin = require('realize/mixins/container_mixin.jsx');
 
 window.Tabs = React.createClass({
@@ -8,9 +9,9 @@ window.Tabs = React.createClass({
   ],
 
   propTypes: {
-    themeClassKey: React.PropTypes.string,
-    className: React.PropTypes.string,
-    activeTab: React.PropTypes.number
+    themeClassKey: PropTypes.string,
+    className: PropTypes.string,
+    activeTab: PropTypes.number
   },
 
   getDefaultProps: function() {

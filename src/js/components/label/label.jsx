@@ -1,14 +1,15 @@
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.Label = React.createClass({
   mixins: [CssClassMixin],
   propTypes: {
-    id: React.PropTypes.string,
-    name: React.PropTypes.string,
-    label: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.bool]),
-    active: React.PropTypes.bool,
-    onClick: React.PropTypes.func,
-    required: React.PropTypes.bool
+    id: PropTypes.string,
+    name: PropTypes.string,
+    label: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+    active: PropTypes.bool,
+    onClick: PropTypes.func,
+    required: PropTypes.bool
   },
 
   getDefaultProps: function() {

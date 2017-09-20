@@ -1,17 +1,18 @@
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.GridPagination = React.createClass({
   mixins: [CssClassMixin],
   propTypes: {
-    count: React.PropTypes.number,
-    page: React.PropTypes.number,
-    perPage: React.PropTypes.number,
-    window: React.PropTypes.number,
-    onPagination: React.PropTypes.func,
-    onChangePerPage: React.PropTypes.func,
-    pageRowsCount: React.PropTypes.number,
-    type: React.PropTypes.string,
-    perPageOptions: React.PropTypes.array
+    count: PropTypes.number,
+    page: PropTypes.number,
+    perPage: PropTypes.number,
+    window: PropTypes.number,
+    onPagination: PropTypes.func,
+    onChangePerPage: PropTypes.func,
+    pageRowsCount: PropTypes.number,
+    type: PropTypes.string,
+    perPageOptions: PropTypes.array
   },
 
   getDefaultProps: function() {

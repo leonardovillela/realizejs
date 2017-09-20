@@ -1,11 +1,12 @@
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.ModalButton = React.createClass({
   mixins: [CssClassMixin],
 
   propTypes: {
-    modalId: React.PropTypes.string,
-    openerId: React.PropTypes.string
+    modalId: PropTypes.string,
+    openerId: PropTypes.string
   },
 
   getDefaultProps: function() {

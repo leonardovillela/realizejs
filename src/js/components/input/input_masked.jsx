@@ -1,3 +1,4 @@
+const PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var InputComponentMixin = require('realize/mixins/input/input_component_mixin.jsx');
 
@@ -8,15 +9,15 @@ window.InputMasked = React.createClass({
   ],
 
   propTypes: {
-    type: React.PropTypes.string,
-    mask: React.PropTypes.string,
-    maskType: React.PropTypes.string,
-    regex: React.PropTypes.string,
-    autoUnmask: React.PropTypes.bool,
-    removeMaskOnChange: React.PropTypes.bool,
-    onComplete: React.PropTypes.func,
-    onIncomplete: React.PropTypes.func,
-    onCleared: React.PropTypes.func
+    type: PropTypes.string,
+    mask: PropTypes.string,
+    maskType: PropTypes.string,
+    regex: PropTypes.string,
+    autoUnmask: PropTypes.bool,
+    removeMaskOnChange: PropTypes.bool,
+    onComplete: PropTypes.func,
+    onIncomplete: PropTypes.func,
+    onCleared: PropTypes.func
   },
 
   getDefaultProps: function() {

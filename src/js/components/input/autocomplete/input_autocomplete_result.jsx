@@ -1,19 +1,20 @@
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.InputAutocompleteResult = React.createClass({
   mixins: [CssClassMixin],
   propTypes: {
-    id: React.PropTypes.string,
-    options: React.PropTypes.array,
-    selectedOptions: React.PropTypes.array,
-    active: React.PropTypes.number,
-    searchValue: React.PropTypes.string,
-    actionButtons: React.PropTypes.array,
-    onKeyDown: React.PropTypes.func,
-    onChange: React.PropTypes.func,
-    onSelect: React.PropTypes.func,
-    onClear: React.PropTypes.func,
-    onOptionMouseEnter: React.PropTypes.func
+    id: PropTypes.string,
+    options: PropTypes.array,
+    selectedOptions: PropTypes.array,
+    active: PropTypes.number,
+    searchValue: PropTypes.string,
+    actionButtons: PropTypes.array,
+    onKeyDown: PropTypes.func,
+    onChange: PropTypes.func,
+    onSelect: PropTypes.func,
+    onClear: PropTypes.func,
+    onOptionMouseEnter: PropTypes.func
   },
 
   getDefaultProps: function() {

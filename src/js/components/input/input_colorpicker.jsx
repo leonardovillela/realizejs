@@ -1,3 +1,4 @@
+var PropTypes = require('prop-types');
 var ColorPicker = require('react-color').default;
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var InputComponentMixin = require('realize/mixins/input/input_component_mixin.jsx');
@@ -5,7 +6,7 @@ var InputComponentMixin = require('realize/mixins/input/input_component_mixin.js
 window.InputColorpicker = React.createClass({
   mixins: [CssClassMixin, InputComponentMixin],
   propTypes: {
-    type: React.PropTypes.string
+    type: PropTypes.string
   },
 
   getDefaultProps: function() {

@@ -1,15 +1,16 @@
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
+var PropTypes = require('prop-types');
 var ReactCSSTransitionGroup = require('react-transition-group');
 
 window.Flash = React.createClass({
   mixins: [CssClassMixin],
   propTypes: {
-    type: React.PropTypes.oneOf(['info', 'warning', 'error', 'success']),
-    message: React.PropTypes.node,
-    dismissTimeout: React.PropTypes.number,
-    canDismiss: React.PropTypes.bool,
-    onDismiss: React.PropTypes.func,
-    dismissed: React.PropTypes.bool
+    type: PropTypes.oneOf(['info', 'warning', 'error', 'success']),
+    message: PropTypes.node,
+    dismissTimeout: PropTypes.number,
+    canDismiss: PropTypes.bool,
+    onDismiss: PropTypes.func,
+    dismissed: PropTypes.bool
   },
 
   getDefaultProps: function() {

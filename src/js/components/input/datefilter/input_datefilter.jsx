@@ -1,17 +1,18 @@
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.InputDatefilter = React.createClass({
   mixins: [CssClassMixin],
   propTypes: {
-    originalId: React.PropTypes.string,
-    originalName: React.PropTypes.string,
-    id: React.PropTypes.string,
-    name: React.PropTypes.string,
-    resource: React.PropTypes.string,
-    disabled: React.PropTypes.bool,
-    fromFilterInput: React.PropTypes.object,
-    toFilterInput: React.PropTypes.object,
-    okButton: React.PropTypes.object
+    originalId: PropTypes.string,
+    originalName: PropTypes.string,
+    id: PropTypes.string,
+    name: PropTypes.string,
+    resource: PropTypes.string,
+    disabled: PropTypes.bool,
+    fromFilterInput: PropTypes.object,
+    toFilterInput: PropTypes.object,
+    okButton: PropTypes.object
   },
 
   getDefaultProps: function() {

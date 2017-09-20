@@ -1,3 +1,4 @@
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var LocalizedResourceFieldMixin = require('realize/mixins/localized_resource_field_mixin.jsx');
 
@@ -5,13 +6,13 @@ window.TableHeader = React.createClass({
   mixins: [CssClassMixin, LocalizedResourceFieldMixin],
 
   propTypes: {
-    name: React.PropTypes.string,
+    name: PropTypes.string,
     label: Realize.PropTypes.localizedString,
-    format: React.PropTypes.oneOf(['text', 'currency', 'number', 'percentage', 'boolean', 'date', 'datetime', 'time']),
-    sortable: React.PropTypes.bool,
-    sortDirection: React.PropTypes.string,
-    sortFieldName: React.PropTypes.string,
-    onSort: React.PropTypes.func
+    format: PropTypes.oneOf(['text', 'currency', 'number', 'percentage', 'boolean', 'date', 'datetime', 'time']),
+    sortable: PropTypes.bool,
+    sortDirection: PropTypes.string,
+    sortFieldName: PropTypes.string,
+    onSort: PropTypes.func
   },
 
   getDefaultProps: function() {

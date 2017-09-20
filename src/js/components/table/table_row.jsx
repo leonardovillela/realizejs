@@ -1,20 +1,21 @@
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.TableRow = React.createClass({
   mixins: [CssClassMixin],
 
   propTypes: {
-    columns: React.PropTypes.object,
-    data: React.PropTypes.object,
-    dataRowIdField: React.PropTypes.string,
-    selectable: React.PropTypes.oneOf(['multiple', 'none', 'one']),
-    selected: React.PropTypes.bool,
-    actionButtons: React.PropTypes.array,
-    rowSelectableFilter: React.PropTypes.func,
-    onSelectToggle: React.PropTypes.func,
-    onClickRow: React.PropTypes.func,
-    rowHref: React.PropTypes.string,
-    tableRowCssClass: React.PropTypes.func
+    columns: PropTypes.object,
+    data: PropTypes.object,
+    dataRowIdField: PropTypes.string,
+    selectable: PropTypes.oneOf(['multiple', 'none', 'one']),
+    selected: PropTypes.bool,
+    actionButtons: PropTypes.array,
+    rowSelectableFilter: PropTypes.func,
+    onSelectToggle: PropTypes.func,
+    onClickRow: PropTypes.func,
+    rowHref: PropTypes.string,
+    tableRowCssClass: PropTypes.func
   },
 
   getDefaultProps: function() {

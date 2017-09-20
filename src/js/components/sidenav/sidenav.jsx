@@ -1,14 +1,15 @@
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.SideNav = React.createClass({
   mixins: [CssClassMixin],
 
   propTypes: {
-    items: React.PropTypes.array,
-    icon: React.PropTypes.string,
-    iconAlign: React.PropTypes.string,
-    text: React.PropTypes.string,
-    ref_id:React.PropTypes.string
+    items: PropTypes.array,
+    icon: PropTypes.string,
+    iconAlign: PropTypes.string,
+    text: PropTypes.string,
+    ref_id:PropTypes.string
   },
 
   getDefaultProps: function() {

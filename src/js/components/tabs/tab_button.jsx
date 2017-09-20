@@ -1,4 +1,5 @@
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
+var PropTypes = require('prop-types');
 var ContainerMixin = require('realize/mixins/container_mixin.jsx');
 var FormContainerMixin = require('realize/mixins/form/form_container_mixin.jsx');
 
@@ -10,9 +11,9 @@ window.TabButton = React.createClass({
   ],
 
   propTypes: {
-    id: React.PropTypes.string,
-    title: React.PropTypes.string,
-    active: React.PropTypes.bool
+    id: PropTypes.string,
+    title: PropTypes.string,
+    active: PropTypes.bool
   },
 
   getDefaultProps: function() {

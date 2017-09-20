@@ -1,3 +1,4 @@
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var RequestHandlerMixin = require('realize/mixins/request_handler_mixin.jsx');
 
@@ -5,18 +6,18 @@ window.TableActionButton = React.createClass({
   mixins: [CssClassMixin, RequestHandlerMixin],
 
   propTypes: {
-    selectedRowIds: React.PropTypes.array,
-    selectedRowIdsParam: React.PropTypes.string,
-    allSelected: React.PropTypes.bool,
-    allSelectedData: React.PropTypes.object,
-    count: React.PropTypes.number,
-    actionUrl: React.PropTypes.string,
-    method: React.PropTypes.string,
-    disabled: React.PropTypes.bool,
-    selectionContext: React.PropTypes.oneOf(['none', 'atLeastOne']),
-    conditionToShowActionButton: React.PropTypes.func,
-    component: React.PropTypes.string,
-    params: React.PropTypes.object
+    selectedRowIds: PropTypes.array,
+    selectedRowIdsParam: PropTypes.string,
+    allSelected: PropTypes.bool,
+    allSelectedData: PropTypes.object,
+    count: PropTypes.number,
+    actionUrl: PropTypes.string,
+    method: PropTypes.string,
+    disabled: PropTypes.bool,
+    selectionContext: PropTypes.oneOf(['none', 'atLeastOne']),
+    conditionToShowActionButton: PropTypes.func,
+    component: PropTypes.string,
+    params: PropTypes.object
   },
 
   getDefaultProps: function() {

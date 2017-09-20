@@ -1,3 +1,4 @@
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var InputComponentMixin = require('realize/mixins/input/input_component_mixin.jsx');
 
@@ -6,7 +7,7 @@ var moment = require('realize/momentWithLocale.js');
 window.InputDatepicker = React.createClass({
   mixins: [CssClassMixin, InputComponentMixin, UtilsMixin],
   propTypes: {
-    mask: React.PropTypes.string
+    mask: PropTypes.string
   },
 
   getDefaultProps: function() {

@@ -1,10 +1,11 @@
+var PropTypes = require('prop-types');
 var ContainerMixin = require('realize/mixins/container_mixin.jsx');
 
 window.Container = React.createClass({
   mixins: [ContainerMixin],
 
   propTypes: {
-    className: React.PropTypes.string
+    className: PropTypes.string
   },
 
   getDefaultProps: function() {

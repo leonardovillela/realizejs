@@ -1,14 +1,15 @@
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.PaginationItem = React.createClass({
   mixins: [CssClassMixin],
 
   propTypes: {
-    disabled: React.PropTypes.bool,
-    active: React.PropTypes.bool,
-    iconType: React.PropTypes.string,
-    text: React.PropTypes.string,
-    onClick: React.PropTypes.func
+    disabled: PropTypes.bool,
+    active: PropTypes.bool,
+    iconType: PropTypes.string,
+    text: PropTypes.string,
+    onClick: PropTypes.func
   },
 
   getDefaultProps: function() {

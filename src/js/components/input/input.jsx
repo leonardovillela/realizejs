@@ -1,21 +1,22 @@
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.Input = React.createClass({
   mixins: [CssClassMixin],
 
   propTypes: {
-    id: React.PropTypes.string,
-    name: React.PropTypes.string,
-    label: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.bool]),
-    value: React.PropTypes.any,
-    component: React.PropTypes.string,
-    formStyle: React.PropTypes.oneOf(['default', 'filter', 'oneLine']),
-    data: React.PropTypes.object,
-    errors: React.PropTypes.oneOfType([React.PropTypes.object, React.PropTypes.array]),
-    resource: React.PropTypes.string,
-    scope: React.PropTypes.oneOf(['resource', 'global']),
-    maxLength: React.PropTypes.number,
-    renderLabel: React.PropTypes.bool
+    id: PropTypes.string,
+    name: PropTypes.string,
+    label: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+    value: PropTypes.any,
+    component: PropTypes.string,
+    formStyle: PropTypes.oneOf(['default', 'filter', 'oneLine']),
+    data: PropTypes.object,
+    errors: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+    resource: PropTypes.string,
+    scope: PropTypes.oneOf(['resource', 'global']),
+    maxLength: PropTypes.number,
+    renderLabel: PropTypes.bool
   },
 
   getDefaultProps: function() {

@@ -1,5 +1,6 @@
 var ModalStore = require('realize/stores/modal_store.js');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
+var PropTypes = require('prop-types');
 var ContainerMixin = require('realize/mixins/container_mixin.jsx');
 
 window.Modal = React.createClass({
@@ -10,19 +11,19 @@ window.Modal = React.createClass({
   ],
 
   propTypes: {
-    id: React.PropTypes.string,
-    opened: React.PropTypes.bool,
-    marginHeaderFooter: React.PropTypes.number,
-    width: React.PropTypes.string,
-    minContentHeight: React.PropTypes.number,
-    useAvailableHeight: React.PropTypes.bool,
+    id: PropTypes.string,
+    opened: PropTypes.bool,
+    marginHeaderFooter: PropTypes.number,
+    width: PropTypes.string,
+    minContentHeight: PropTypes.number,
+    useAvailableHeight: PropTypes.bool,
 
-    dismissible: React.PropTypes.bool,
-    opacity: React.PropTypes.number,
-    inDuration: React.PropTypes.number,
-    outDuration: React.PropTypes.number,
-    ready: React.PropTypes.func,
-    complete: React.PropTypes.func
+    dismissible: PropTypes.bool,
+    opacity: PropTypes.number,
+    inDuration: PropTypes.number,
+    outDuration: PropTypes.number,
+    ready: PropTypes.func,
+    complete: PropTypes.func
   },
 
   getDefaultProps: function() {

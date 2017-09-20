@@ -1,11 +1,12 @@
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.ModalFooter = React.createClass({
   mixins: [CssClassMixin],
 
   propTypes: {
-    separatorThemeClassKey: React.PropTypes.string,
-    withSeparator: React.PropTypes.bool
+    separatorThemeClassKey: PropTypes.string,
+    withSeparator: PropTypes.bool
   },
 
   getDefaultProps: function() {

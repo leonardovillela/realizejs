@@ -1,3 +1,4 @@
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 var _filter = require('lodash/filter');
@@ -7,17 +8,17 @@ window.InputGroup = React.createClass({
   mixins: [CssClassMixin],
 
   propTypes: {
-    inputs: React.PropTypes.object,
-    data: React.PropTypes.object,
-    errors: React.PropTypes.oneOfType([React.PropTypes.object, React.PropTypes.array]),
-    resource: React.PropTypes.string,
-    disabled: React.PropTypes.bool,
-    readOnly: React.PropTypes.bool,
-    label: React.PropTypes.string,
-    separator: React.PropTypes.bool,
-    formStyle: React.PropTypes.string,
-    wrapperClassName: React.PropTypes.string,
-    inputWrapperComponent: React.PropTypes.oneOfType([React.PropTypes.func, React.PropTypes.element, React.PropTypes.string])
+    inputs: PropTypes.object,
+    data: PropTypes.object,
+    errors: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+    resource: PropTypes.string,
+    disabled: PropTypes.bool,
+    readOnly: PropTypes.bool,
+    label: PropTypes.string,
+    separator: PropTypes.bool,
+    formStyle: PropTypes.string,
+    wrapperClassName: PropTypes.string,
+    inputWrapperComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.element, PropTypes.string])
   },
 
   getDefaultProps: function() {

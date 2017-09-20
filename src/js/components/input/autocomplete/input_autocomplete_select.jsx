@@ -1,3 +1,4 @@
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var UtilsMixin = require('realize/mixins/utils_mixin.jsx');
 var InputComponentMixin = require('realize/mixins/input/input_component_mixin.jsx');
@@ -10,7 +11,7 @@ window.InputAutocompleteSelect = React.createClass({
   ],
 
   propTypes: {
-    selectedOptions: React.PropTypes.array,
+    selectedOptions: PropTypes.array,
     placeholder: Realize.PropTypes.localizedString
   },
 

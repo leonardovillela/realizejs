@@ -1,3 +1,4 @@
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var UtilsMixin = require('realize/mixins/utils_mixin.jsx');
 var InputComponentMixin = require('realize/mixins/input/input_component_mixin.jsx');
@@ -10,9 +11,9 @@ window.InputDatefilterSelect = React.createClass({
   ],
 
   propTypes: {
-    selectedDates: React.PropTypes.array,
+    selectedDates: PropTypes.array,
     placeholder: Realize.PropTypes.localizedString,
-    onBlur: React.PropTypes.func
+    onBlur: PropTypes.func
   },
 
   getDefaultProps: function() {

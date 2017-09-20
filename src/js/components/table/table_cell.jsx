@@ -1,3 +1,4 @@
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var moment = require('moment');
 var numeral = require('realize/numeralWithLocale.js');
@@ -6,13 +7,13 @@ window.TableCell = React.createClass({
   mixins: [CssClassMixin],
 
   propTypes: {
-    name: React.PropTypes.string,
-    data: React.PropTypes.object,
-    dataRowIdField: React.PropTypes.string,
-    value: React.PropTypes.func,
-    format: React.PropTypes.oneOf(['text', 'currency', 'number', 'percentage', 'boolean', 'date', 'datetime', 'time']),
-    formatString: React.PropTypes.string,
-    component: React.PropTypes.string
+    name: PropTypes.string,
+    data: PropTypes.object,
+    dataRowIdField: PropTypes.string,
+    value: PropTypes.func,
+    format: PropTypes.oneOf(['text', 'currency', 'number', 'percentage', 'boolean', 'date', 'datetime', 'time']),
+    formatString: PropTypes.string,
+    component: PropTypes.string
   },
 
   getDefaultProps: function() {

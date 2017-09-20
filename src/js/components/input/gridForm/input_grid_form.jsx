@@ -1,3 +1,4 @@
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var InputComponentMixin = require('realize/mixins/input/input_component_mixin.jsx');
 
@@ -8,13 +9,13 @@ window.InputGridForm = React.createClass({
   mixins: [CssClassMixin, InputComponentMixin],
 
   propTypes: {
-    label: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.bool]),
-    fields: React.PropTypes.object,
-    form: React.PropTypes.object,
-    clientSide: React.PropTypes.bool,
-    inputWrapperComponent: React.PropTypes.oneOfType([React.PropTypes.func, React.PropTypes.element, React.PropTypes.string]),
-    onSuccess: React.PropTypes.func,
-    onDestroySuccess: React.PropTypes.func
+    label: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+    fields: PropTypes.object,
+    form: PropTypes.object,
+    clientSide: PropTypes.bool,
+    inputWrapperComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.element, PropTypes.string]),
+    onSuccess: PropTypes.func,
+    onDestroySuccess: PropTypes.func
   },
 
   getDefaultProps: function() {

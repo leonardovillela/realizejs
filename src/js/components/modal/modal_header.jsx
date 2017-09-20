@@ -1,10 +1,11 @@
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.ModalHeader = React.createClass({
   mixins: [CssClassMixin],
 
   propTypes: {
-    withTitle: React.PropTypes.bool
+    withTitle: PropTypes.bool
   },
 
   getDefaultProps: function() {

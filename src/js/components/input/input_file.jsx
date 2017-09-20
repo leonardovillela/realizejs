@@ -1,16 +1,17 @@
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var InputComponentMixin = require('realize/mixins/input/input_component_mixin.jsx');
 
 window.InputFile = React.createClass({
   mixins: [CssClassMixin, InputComponentMixin],
   propTypes: {
-    wrapperClassName: React.PropTypes.string,
-    buttonClassName: React.PropTypes.string,
+    wrapperClassName: PropTypes.string,
+    buttonClassName: PropTypes.string,
     buttonName: Realize.PropTypes.localizedString,
-    buttonIcon: React.PropTypes.string,
-    filePathWrapperClassName: React.PropTypes.string,
-    filePathField: React.PropTypes.string,
-    data: React.PropTypes.object
+    buttonIcon: PropTypes.string,
+    filePathWrapperClassName: PropTypes.string,
+    filePathField: PropTypes.string,
+    data: PropTypes.object
   },
 
   getDefaultProps: function() {

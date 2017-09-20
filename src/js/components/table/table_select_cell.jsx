@@ -1,3 +1,4 @@
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var UtilsMixin = require('realize/mixins/utils_mixin.jsx');
 
@@ -5,11 +6,11 @@ window.TableSelectCell = React.createClass({
   mixins: [CssClassMixin, UtilsMixin],
 
   propTypes: {
-    rowId: React.PropTypes.string,
-    cellElement: React.PropTypes.string,
-    dataRowIds: React.PropTypes.array,
-    selected: React.PropTypes.bool,
-    onSelectToggle: React.PropTypes.func
+    rowId: PropTypes.string,
+    cellElement: PropTypes.string,
+    dataRowIds: PropTypes.array,
+    selected: PropTypes.bool,
+    onSelectToggle: PropTypes.func
   },
 
   getDefaultProps: function() {

@@ -1,3 +1,4 @@
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var _isEmpty = require('lodash/isEmpty');
 
@@ -5,10 +6,10 @@ window.FormButtonGroup = React.createClass({
   mixins: [CssClassMixin],
 
   propTypes: {
-    inputs: React.PropTypes.object,
-    submitButton: React.PropTypes.oneOfType([React.PropTypes.object, React.PropTypes.bool]),
-    otherButtons: React.PropTypes.array,
-    isLoading: React.PropTypes.bool
+    inputs: PropTypes.object,
+    submitButton: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
+    otherButtons: PropTypes.array,
+    isLoading: PropTypes.bool
   },
 
   getDefaultProps: function() {

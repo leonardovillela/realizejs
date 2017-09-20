@@ -1,3 +1,4 @@
+var PropTypes = require('prop-types');
 var RequestHandlerMixin = require('realize/mixins/request_handler_mixin.jsx');
 var UtilsMixin = require('realize/mixins/utils_mixin.jsx');
 
@@ -5,14 +6,14 @@ window.EditPermissions = React.createClass({
   mixins: [RequestHandlerMixin,UtilsMixin],
 
   PropTypes: {
-    principal: React.PropTypes.object,
-    principalType: React.PropTypes.string,
-    resource: React.PropTypes.object,
-    resourceType: React.PropTypes.string,
-    title: React.PropTypes.string,
-    saveOnSelect: React.PropTypes.bool,
-    principalPermissions: React.PropTypes.object,
-    permissionsBaseUrl: React.PropTypes.permissionsBaseUrl
+    principal: PropTypes.object,
+    principalType: PropTypes.string,
+    resource: PropTypes.object,
+    resourceType: PropTypes.string,
+    title: PropTypes.string,
+    saveOnSelect: PropTypes.bool,
+    principalPermissions: PropTypes.object,
+    permissionsBaseUrl: PropTypes.permissionsBaseUrl
   },
 
   getDefaultProps: function() {

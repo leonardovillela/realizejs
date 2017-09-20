@@ -1,10 +1,11 @@
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.InputError = React.createClass({
   mixins: [CssClassMixin],
 
   propTypes: {
-    errors: React.PropTypes.oneOfType([React.PropTypes.object, React.PropTypes.array])
+    errors: PropTypes.oneOfType([PropTypes.object, PropTypes.array])
   },
 
   getDefaultProps: function() {

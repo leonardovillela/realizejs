@@ -1,15 +1,16 @@
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.Pagination = React.createClass({
   mixins: [CssClassMixin],
 
   propTypes: {
-    count: React.PropTypes.number,
-    page: React.PropTypes.number,
-    perPage: React.PropTypes.number,
-    window: React.PropTypes.number,
-    onPagination: React.PropTypes.func,
-    type: React.PropTypes.string
+    count: PropTypes.number,
+    page: PropTypes.number,
+    perPage: PropTypes.number,
+    window: PropTypes.number,
+    onPagination: PropTypes.func,
+    type: PropTypes.string
   },
 
   getDefaultProps: function() {

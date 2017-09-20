@@ -1,4 +1,5 @@
 var RequestHandlerMixin = require('realize/mixins/request_handler_mixin.jsx');
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.Button = React.createClass({
@@ -6,20 +7,20 @@ window.Button = React.createClass({
 
   propTypes: {
     name: Realize.PropTypes.localizedString,
-    type: React.PropTypes.string,
-    icon: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.object]),
-    style: React.PropTypes.oneOf(['danger', 'primary', 'warning', 'cancel']),
-    disabled: React.PropTypes.bool,
-    href: React.PropTypes.string,
-    onClick: React.PropTypes.func,
-    actionUrl: React.PropTypes.string,
-    actionData: React.PropTypes.object,
-    isLoading: React.PropTypes.bool,
+    type: PropTypes.string,
+    icon: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+    style: PropTypes.oneOf(['danger', 'primary', 'warning', 'cancel']),
+    disabled: PropTypes.bool,
+    href: PropTypes.string,
+    onClick: PropTypes.func,
+    actionUrl: PropTypes.string,
+    actionData: PropTypes.object,
+    isLoading: PropTypes.bool,
     disableWith: Realize.PropTypes.localizedString,
     confirmsWith: Realize.PropTypes.localizedString,
-    element: React.PropTypes.oneOf(['button', 'a']),
-    target: React.PropTypes.string,
-    method: React.PropTypes.string
+    element: PropTypes.oneOf(['button', 'a']),
+    target: PropTypes.string,
+    method: PropTypes.string
   },
 
   getDefaultProps: function() {

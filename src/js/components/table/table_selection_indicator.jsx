@@ -1,22 +1,23 @@
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.TableSelectionIndicator = React.createClass({
   mixins: [CssClassMixin],
 
   propTypes: {
-    dataRows: React.PropTypes.array,
-    selectedRowIds: React.PropTypes.array,
-    actionButtons: React.PropTypes.array,
-    message: React.PropTypes.object,
+    dataRows: PropTypes.array,
+    selectedRowIds: PropTypes.array,
+    actionButtons: PropTypes.array,
+    message: PropTypes.object,
     removeSelectionButtonName: Realize.PropTypes.localizedString,
-    selectable: React.PropTypes.oneOf(['multiple', 'none', 'one']),
+    selectable: PropTypes.oneOf(['multiple', 'none', 'one']),
     selectAllButtonName: Realize.PropTypes.localizedString,
-    allSelected: React.PropTypes.bool,
-    count: React.PropTypes.number,
-    onRemoveSelection: React.PropTypes.func,
-    onSelectAll: React.PropTypes.func,
-    rowSelectableFilter: React.PropTypes.func,
-    forceShowSelectAllButton: React.PropTypes.bool
+    allSelected: PropTypes.bool,
+    count: PropTypes.number,
+    onRemoveSelection: PropTypes.func,
+    onSelectAll: PropTypes.func,
+    rowSelectableFilter: PropTypes.func,
+    forceShowSelectAllButton: PropTypes.bool
   },
 
   getDefaultProps: function() {

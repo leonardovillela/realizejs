@@ -1,4 +1,5 @@
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
+var PropTypes = require('prop-types');
 var ContainerMixin = require('realize/mixins/container_mixin.jsx');
 
 window.Tab = React.createClass({
@@ -8,7 +9,7 @@ window.Tab = React.createClass({
   ],
 
   propTypes: {
-    id: React.PropTypes.string
+    id: PropTypes.string
   },
 
   render: function () {

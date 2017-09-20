@@ -1,5 +1,5 @@
 /*!
- * Realize v0.8.38 (http://www.wkm.com.br)
+ * Realize v0.8.39 (http://www.wkm.com.br)
  * Copyright 2015-2017 
  */
 
@@ -103174,6 +103174,7 @@ module.exports = ModalActions;
 (function (React){
 'use strict';
 
+var PropTypes = require('prop-types');
 var RequestHandlerMixin = require('realize/mixins/request_handler_mixin.jsx');
 var UtilsMixin = require('realize/mixins/utils_mixin.jsx');
 
@@ -103183,14 +103184,14 @@ window.EditPermissions = React.createClass({
   mixins: [RequestHandlerMixin, UtilsMixin],
 
   PropTypes: {
-    principal: React.PropTypes.object,
-    principalType: React.PropTypes.string,
-    resource: React.PropTypes.object,
-    resourceType: React.PropTypes.string,
-    title: React.PropTypes.string,
-    saveOnSelect: React.PropTypes.bool,
-    principalPermissions: React.PropTypes.object,
-    permissionsBaseUrl: React.PropTypes.permissionsBaseUrl
+    principal: PropTypes.object,
+    principalType: PropTypes.string,
+    resource: PropTypes.object,
+    resourceType: PropTypes.string,
+    title: PropTypes.string,
+    saveOnSelect: PropTypes.bool,
+    principalPermissions: PropTypes.object,
+    permissionsBaseUrl: PropTypes.permissionsBaseUrl
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -103434,13 +103435,14 @@ window.EditPermissions = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411,"realize/mixins/request_handler_mixin.jsx":710,"realize/mixins/utils_mixin.jsx":713}],606:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/request_handler_mixin.jsx":710,"realize/mixins/utils_mixin.jsx":713}],606:[function(require,module,exports){
 (function (React){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var RequestHandlerMixin = require('realize/mixins/request_handler_mixin.jsx');
+var PropTypes = require('prop-types');
 var ModalRendererMixin = require('realize/mixins/modal_renderer_mixin.jsx');
 
 window.IndexPermissions = React.createClass({
@@ -103449,11 +103451,11 @@ window.IndexPermissions = React.createClass({
   mixins: [RequestHandlerMixin, ModalRendererMixin],
 
   PropTypes: {
-    principal: React.PropTypes.object,
-    resourceType: React.PropTypes.string,
-    gridProps: React.PropTypes.object,
-    className: React.PropTypes.string,
-    editPermissionBaseUrl: React.PropTypes.object
+    principal: PropTypes.object,
+    resourceType: PropTypes.string,
+    gridProps: PropTypes.object,
+    className: PropTypes.string,
+    editPermissionBaseUrl: PropTypes.object
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -103581,7 +103583,7 @@ window.IndexPermissions = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411,"realize/mixins/modal_renderer_mixin.jsx":709,"realize/mixins/request_handler_mixin.jsx":710}],607:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/modal_renderer_mixin.jsx":709,"realize/mixins/request_handler_mixin.jsx":710}],607:[function(require,module,exports){
 (function (React){
 'use strict';
 
@@ -104147,6 +104149,7 @@ window.PermissionManagerModal = React.createClass({
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
 var RequestHandlerMixin = require('realize/mixins/request_handler_mixin.jsx');
 var UtilsMixin = require('realize/mixins/utils_mixin.jsx');
 
@@ -104158,16 +104161,16 @@ window.PermissionManager = React.createClass({
   ////// SPECIFICATIONS //////
 
   PropTypes: {
-    principal: React.PropTypes.object,
-    principalType: React.PropTypes.string,
-    resource: React.PropTypes.object,
-    resourceType: React.PropTypes.string,
-    PrincipalGridProps: React.PropTypes.object,
-    permissionManagerInModal: React.PropTypes.bool,
-    principalsBaseUrl: React.PropTypes.string,
-    principalsPermissionsBaseUrl: React.PropTypes.string,
-    impliesPermissionBaseUrl: React.PropTypes.string,
-    permissionsBaseUrl: React.PropTypes.string
+    principal: PropTypes.object,
+    principalType: PropTypes.string,
+    resource: PropTypes.object,
+    resourceType: PropTypes.string,
+    PrincipalGridProps: PropTypes.object,
+    permissionManagerInModal: PropTypes.bool,
+    principalsBaseUrl: PropTypes.string,
+    principalsPermissionsBaseUrl: PropTypes.string,
+    impliesPermissionBaseUrl: PropTypes.string,
+    permissionsBaseUrl: PropTypes.string
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -104515,11 +104518,12 @@ window.PermissionManager = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411,"realize/mixins/request_handler_mixin.jsx":710,"realize/mixins/utils_mixin.jsx":713}],613:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/request_handler_mixin.jsx":710,"realize/mixins/utils_mixin.jsx":713}],613:[function(require,module,exports){
 (function (React){
 'use strict';
 
 var RequestHandlerMixin = require('realize/mixins/request_handler_mixin.jsx');
+var PropTypes = require('prop-types');
 var ModalRendererMixin = require('realize/mixins/modal_renderer_mixin.jsx');
 
 window.PrincipalActionButtons = React.createClass({
@@ -104528,9 +104532,9 @@ window.PrincipalActionButtons = React.createClass({
   mixins: [RequestHandlerMixin, ModalRendererMixin],
 
   PropTypes: {
-    className: React.PropTypes.string,
-    handleOpenPrincipalModal: React.PropTypes.func,
-    handleRemovePrincipal: React.PropTypes.func
+    className: PropTypes.string,
+    handleOpenPrincipalModal: PropTypes.func,
+    handleRemovePrincipal: PropTypes.func
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -104574,7 +104578,7 @@ window.PrincipalActionButtons = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411,"realize/mixins/modal_renderer_mixin.jsx":709,"realize/mixins/request_handler_mixin.jsx":710}],614:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/modal_renderer_mixin.jsx":709,"realize/mixins/request_handler_mixin.jsx":710}],614:[function(require,module,exports){
 (function (React){
 'use strict';
 
@@ -104620,6 +104624,7 @@ window.UpdatePermissionsButton = React.createClass({
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var RequestHandlerMixin = require('realize/mixins/request_handler_mixin.jsx');
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.Button = React.createClass({
@@ -104629,20 +104634,20 @@ window.Button = React.createClass({
 
   propTypes: {
     name: Realize.PropTypes.localizedString,
-    type: React.PropTypes.string,
-    icon: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.object]),
-    style: React.PropTypes.oneOf(['danger', 'primary', 'warning', 'cancel']),
-    disabled: React.PropTypes.bool,
-    href: React.PropTypes.string,
-    onClick: React.PropTypes.func,
-    actionUrl: React.PropTypes.string,
-    actionData: React.PropTypes.object,
-    isLoading: React.PropTypes.bool,
+    type: PropTypes.string,
+    icon: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+    style: PropTypes.oneOf(['danger', 'primary', 'warning', 'cancel']),
+    disabled: PropTypes.bool,
+    href: PropTypes.string,
+    onClick: PropTypes.func,
+    actionUrl: PropTypes.string,
+    actionData: PropTypes.object,
+    isLoading: PropTypes.bool,
     disableWith: Realize.PropTypes.localizedString,
     confirmsWith: Realize.PropTypes.localizedString,
-    element: React.PropTypes.oneOf(['button', 'a']),
-    target: React.PropTypes.string,
-    method: React.PropTypes.string
+    element: PropTypes.oneOf(['button', 'a']),
+    target: PropTypes.string,
+    method: PropTypes.string
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -104780,12 +104785,13 @@ window.Button = React.createClass({
 });
 
 }).call(this,require("react"),require("realize/realize.js"))
-},{"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/request_handler_mixin.jsx":710,"realize/realize.js":717}],616:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/request_handler_mixin.jsx":710,"realize/realize.js":717}],616:[function(require,module,exports){
 (function (React){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.ButtonGroup = React.createClass({
@@ -104793,7 +104799,7 @@ window.ButtonGroup = React.createClass({
 
   mixins: [CssClassMixin],
   propTypes: {
-    buttons: React.PropTypes.array
+    buttons: PropTypes.array
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -104827,10 +104833,11 @@ window.ButtonGroup = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411,"realize/mixins/css_class_mixin.jsx":697}],617:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697}],617:[function(require,module,exports){
 (function (React){
 'use strict';
 
+var PropTypes = require('prop-types');
 var ContainerMixin = require('realize/mixins/container_mixin.jsx');
 
 window.Container = React.createClass({
@@ -104839,7 +104846,7 @@ window.Container = React.createClass({
   mixins: [ContainerMixin],
 
   propTypes: {
-    className: React.PropTypes.string
+    className: PropTypes.string
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -104859,13 +104866,14 @@ window.Container = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411,"realize/mixins/container_mixin.jsx":696}],618:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/container_mixin.jsx":696}],618:[function(require,module,exports){
 (function (React){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
+var PropTypes = require('prop-types');
 var ReactCSSTransitionGroup = require('react-transition-group');
 
 window.Flash = React.createClass({
@@ -104873,12 +104881,12 @@ window.Flash = React.createClass({
 
   mixins: [CssClassMixin],
   propTypes: {
-    type: React.PropTypes.oneOf(['info', 'warning', 'error', 'success']),
-    message: React.PropTypes.node,
-    dismissTimeout: React.PropTypes.number,
-    canDismiss: React.PropTypes.bool,
-    onDismiss: React.PropTypes.func,
-    dismissed: React.PropTypes.bool
+    type: PropTypes.oneOf(['info', 'warning', 'error', 'success']),
+    message: PropTypes.node,
+    dismissTimeout: PropTypes.number,
+    canDismiss: PropTypes.bool,
+    onDismiss: PropTypes.func,
+    dismissed: PropTypes.bool
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -104947,10 +104955,11 @@ window.Flash = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411,"react-transition-group":406,"realize/mixins/css_class_mixin.jsx":697}],619:[function(require,module,exports){
+},{"prop-types":353,"react":411,"react-transition-group":406,"realize/mixins/css_class_mixin.jsx":697}],619:[function(require,module,exports){
 (function (React){
 'use strict';
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.FlashContent = React.createClass({
@@ -104958,8 +104967,8 @@ window.FlashContent = React.createClass({
 
   mixins: [CssClassMixin],
   propTypes: {
-    type: React.PropTypes.string,
-    message: React.PropTypes.oneOfType([React.PropTypes.element, React.PropTypes.string, React.PropTypes.array])
+    type: PropTypes.string,
+    message: PropTypes.oneOfType([PropTypes.element, PropTypes.string, PropTypes.array])
   },
 
   getInitialState: function getInitialState() {
@@ -104991,10 +105000,11 @@ window.FlashContent = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411,"realize/mixins/css_class_mixin.jsx":697}],620:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697}],620:[function(require,module,exports){
 (function (React){
 'use strict';
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.FlashDismiss = React.createClass({
@@ -105002,9 +105012,9 @@ window.FlashDismiss = React.createClass({
 
   mixins: [CssClassMixin],
   propTypes: {
-    type: React.PropTypes.string,
-    text: React.PropTypes.string,
-    onClick: React.PropTypes.func
+    type: PropTypes.string,
+    text: PropTypes.string,
+    onClick: PropTypes.func
   },
 
   getInitialState: function getInitialState() {
@@ -105023,12 +105033,13 @@ window.FlashDismiss = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411,"realize/mixins/css_class_mixin.jsx":697}],621:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697}],621:[function(require,module,exports){
 (function (React){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var UtilsMixin = require('realize/mixins/utils_mixin.jsx');
 
@@ -105038,19 +105049,19 @@ window.BulkEditForm = React.createClass({
   mixins: [CssClassMixin, UtilsMixin],
 
   propTypes: {
-    inputs: React.PropTypes.object,
-    data: React.PropTypes.object,
-    action: React.PropTypes.string,
-    method: React.PropTypes.string,
-    dataType: React.PropTypes.string,
-    contentType: React.PropTypes.string,
-    style: React.PropTypes.string,
-    resource: React.PropTypes.string,
-    submitButton: React.PropTypes.object,
-    otherButtons: React.PropTypes.array,
-    isLoading: React.PropTypes.bool,
-    onSubmit: React.PropTypes.func,
-    onReset: React.PropTypes.func
+    inputs: PropTypes.object,
+    data: PropTypes.object,
+    action: PropTypes.string,
+    method: PropTypes.string,
+    dataType: PropTypes.string,
+    contentType: PropTypes.string,
+    style: PropTypes.string,
+    resource: PropTypes.string,
+    submitButton: PropTypes.object,
+    otherButtons: PropTypes.array,
+    isLoading: PropTypes.bool,
+    onSubmit: PropTypes.func,
+    onReset: PropTypes.func
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -105223,13 +105234,14 @@ window.BulkEditForm = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/utils_mixin.jsx":713}],622:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/utils_mixin.jsx":713}],622:[function(require,module,exports){
 (function (React,ReactDOM){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
+var PropTypes = require('prop-types');
 var ContainerMixin = require('realize/mixins/container_mixin.jsx');
 var FormErrorHandlerMixin = require('realize/mixins/form/form_error_handler_mixin.jsx');
 var FormSuccessHandlerMixin = require('realize/mixins/form/form_success_handler_mixin.jsx');
@@ -105240,25 +105252,25 @@ window.Form = React.createClass({
   mixins: [CssClassMixin, ContainerMixin, FormErrorHandlerMixin, FormSuccessHandlerMixin],
 
   propTypes: {
-    id: React.PropTypes.string,
-    inputs: React.PropTypes.object,
-    data: React.PropTypes.object,
-    action: React.PropTypes.string,
-    method: React.PropTypes.string,
-    dataType: React.PropTypes.string,
-    contentType: React.PropTypes.string,
-    multipart: React.PropTypes.bool,
-    style: React.PropTypes.string,
-    resource: React.PropTypes.string,
-    ajaxSubmit: React.PropTypes.bool,
-    isLoading: React.PropTypes.bool,
-    disabled: React.PropTypes.bool,
-    readOnly: React.PropTypes.bool,
-    inputWrapperComponent: React.PropTypes.oneOfType([React.PropTypes.func, React.PropTypes.element, React.PropTypes.string]),
-    submitButton: React.PropTypes.oneOfType([React.PropTypes.object, React.PropTypes.bool]),
-    otherButtons: React.PropTypes.array,
-    onSubmit: React.PropTypes.func,
-    onReset: React.PropTypes.func
+    id: PropTypes.string,
+    inputs: PropTypes.object,
+    data: PropTypes.object,
+    action: PropTypes.string,
+    method: PropTypes.string,
+    dataType: PropTypes.string,
+    contentType: PropTypes.string,
+    multipart: PropTypes.bool,
+    style: PropTypes.string,
+    resource: PropTypes.string,
+    ajaxSubmit: PropTypes.bool,
+    isLoading: PropTypes.bool,
+    disabled: PropTypes.bool,
+    readOnly: PropTypes.bool,
+    inputWrapperComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.element, PropTypes.string]),
+    submitButton: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
+    otherButtons: PropTypes.array,
+    onSubmit: PropTypes.func,
+    onReset: PropTypes.func
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -105446,12 +105458,13 @@ window.Form = React.createClass({
 });
 
 }).call(this,require("react"),require("react-dom"))
-},{"react":411,"react-dom":402,"realize/mixins/container_mixin.jsx":696,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/form/form_error_handler_mixin.jsx":700,"realize/mixins/form/form_success_handler_mixin.jsx":701}],623:[function(require,module,exports){
+},{"prop-types":353,"react":411,"react-dom":402,"realize/mixins/container_mixin.jsx":696,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/form/form_error_handler_mixin.jsx":700,"realize/mixins/form/form_success_handler_mixin.jsx":701}],623:[function(require,module,exports){
 (function (React){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var _isEmpty = require('lodash/isEmpty');
 
@@ -105461,10 +105474,10 @@ window.FormButtonGroup = React.createClass({
   mixins: [CssClassMixin],
 
   propTypes: {
-    inputs: React.PropTypes.object,
-    submitButton: React.PropTypes.oneOfType([React.PropTypes.object, React.PropTypes.bool]),
-    otherButtons: React.PropTypes.array,
-    isLoading: React.PropTypes.bool
+    inputs: PropTypes.object,
+    submitButton: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
+    otherButtons: PropTypes.array,
+    isLoading: PropTypes.bool
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -105540,12 +105553,13 @@ window.FormButtonGroup = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"lodash/isEmpty":174,"react":411,"realize/mixins/css_class_mixin.jsx":697}],624:[function(require,module,exports){
+},{"lodash/isEmpty":174,"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697}],624:[function(require,module,exports){
 (function (React,Realize){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 var _filter = require('lodash/filter');
@@ -105557,17 +105571,17 @@ window.InputGroup = React.createClass({
   mixins: [CssClassMixin],
 
   propTypes: {
-    inputs: React.PropTypes.object,
-    data: React.PropTypes.object,
-    errors: React.PropTypes.oneOfType([React.PropTypes.object, React.PropTypes.array]),
-    resource: React.PropTypes.string,
-    disabled: React.PropTypes.bool,
-    readOnly: React.PropTypes.bool,
-    label: React.PropTypes.string,
-    separator: React.PropTypes.bool,
-    formStyle: React.PropTypes.string,
-    wrapperClassName: React.PropTypes.string,
-    inputWrapperComponent: React.PropTypes.oneOfType([React.PropTypes.func, React.PropTypes.element, React.PropTypes.string])
+    inputs: PropTypes.object,
+    data: PropTypes.object,
+    errors: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+    resource: PropTypes.string,
+    disabled: PropTypes.bool,
+    readOnly: PropTypes.bool,
+    label: PropTypes.string,
+    separator: PropTypes.bool,
+    formStyle: PropTypes.string,
+    wrapperClassName: PropTypes.string,
+    inputWrapperComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.element, PropTypes.string])
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -105695,12 +105709,13 @@ window.InputGroup = React.createClass({
 });
 
 }).call(this,require("react"),require("realize/realize.js"))
-},{"lodash/filter":164,"lodash/merge":189,"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/realize.js":717}],625:[function(require,module,exports){
+},{"lodash/filter":164,"lodash/merge":189,"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/realize.js":717}],625:[function(require,module,exports){
 (function (React,ReactDOM,Realize){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var RequestHandlerMixin = require('realize/mixins/request_handler_mixin.jsx');
 var RestActionsMixin = require('realize/mixins/rest_actions_mixin.jsx');
@@ -105714,38 +105729,38 @@ window.Grid = React.createClass({
   mixins: [CssClassMixin, RequestHandlerMixin, RestActionsMixin, GridActionsMixin],
 
   propTypes: {
-    url: React.PropTypes.string,
-    eagerLoad: React.PropTypes.bool,
-    resource: React.PropTypes.string,
-    paginationConfigs: React.PropTypes.object,
-    sortConfigs: React.PropTypes.object,
-    sortData: React.PropTypes.object,
-    filter: React.PropTypes.object,
-    columns: React.PropTypes.object,
-    data: React.PropTypes.object,
+    url: PropTypes.string,
+    eagerLoad: PropTypes.bool,
+    resource: PropTypes.string,
+    paginationConfigs: PropTypes.object,
+    sortConfigs: PropTypes.object,
+    sortData: PropTypes.object,
+    filter: PropTypes.object,
+    columns: PropTypes.object,
+    data: PropTypes.object,
     emptyMessage: Realize.PropTypes.localizedString,
-    dataRowsParam: React.PropTypes.string,
-    countParam: React.PropTypes.string,
-    selectedRowIdsParam: React.PropTypes.string,
-    dataRowIdField: React.PropTypes.string,
-    isLoading: React.PropTypes.bool,
-    selectable: React.PropTypes.oneOf(['multiple', 'none', 'one']),
-    tableClassName: React.PropTypes.string,
-    onLoadSuccess: React.PropTypes.func,
-    onLoadError: React.PropTypes.func,
-    rowSelectableFilter: React.PropTypes.func,
-    customTableHeader: React.PropTypes.string,
-    forceShowSelectAllButton: React.PropTypes.bool,
-    onClickRow: React.PropTypes.func,
-    tableRowCssClass: React.PropTypes.func,
-    paginationOnTop: React.PropTypes.bool,
-    clearThemeTable: React.PropTypes.bool,
-    pagination: React.PropTypes.bool,
-    perPageOptions: React.PropTypes.array,
-    onFilterSubmit: React.PropTypes.func,
-    onSelectDataRow: React.PropTypes.func,
-    onRemoveSelection: React.PropTypes.func,
-    onSelectAllRows: React.PropTypes.func
+    dataRowsParam: PropTypes.string,
+    countParam: PropTypes.string,
+    selectedRowIdsParam: PropTypes.string,
+    dataRowIdField: PropTypes.string,
+    isLoading: PropTypes.bool,
+    selectable: PropTypes.oneOf(['multiple', 'none', 'one']),
+    tableClassName: PropTypes.string,
+    onLoadSuccess: PropTypes.func,
+    onLoadError: PropTypes.func,
+    rowSelectableFilter: PropTypes.func,
+    customTableHeader: PropTypes.string,
+    forceShowSelectAllButton: PropTypes.bool,
+    onClickRow: PropTypes.func,
+    tableRowCssClass: PropTypes.func,
+    paginationOnTop: PropTypes.bool,
+    clearThemeTable: PropTypes.bool,
+    pagination: PropTypes.bool,
+    perPageOptions: PropTypes.array,
+    onFilterSubmit: PropTypes.func,
+    onSelectDataRow: PropTypes.func,
+    onRemoveSelection: PropTypes.func,
+    onSelectAllRows: PropTypes.func
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -106107,12 +106122,13 @@ window.Grid = React.createClass({
 });
 
 }).call(this,require("react"),require("react-dom"),require("realize/realize.js"))
-},{"../../utils.js":725,"react":411,"react-dom":402,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/grid/grid_actions_mixin.jsx":702,"realize/mixins/request_handler_mixin.jsx":710,"realize/mixins/rest_actions_mixin.jsx":711,"realize/realize.js":717}],626:[function(require,module,exports){
+},{"../../utils.js":725,"prop-types":353,"react":411,"react-dom":402,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/grid/grid_actions_mixin.jsx":702,"realize/mixins/request_handler_mixin.jsx":710,"realize/mixins/rest_actions_mixin.jsx":711,"realize/realize.js":717}],626:[function(require,module,exports){
 (function (React,ReactDOM){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.GridFilter = React.createClass({
@@ -106120,17 +106136,17 @@ window.GridFilter = React.createClass({
 
   mixins: [CssClassMixin],
   propTypes: {
-    inputs: React.PropTypes.object,
-    action: React.PropTypes.string,
-    method: React.PropTypes.string,
-    submitButton: React.PropTypes.object,
-    clearButton: React.PropTypes.object,
-    onSuccess: React.PropTypes.func,
-    onError: React.PropTypes.func,
-    onSubmit: React.PropTypes.func,
-    onReset: React.PropTypes.func,
-    isLoading: React.PropTypes.bool,
-    collapsible: React.PropTypes.bool
+    inputs: PropTypes.object,
+    action: PropTypes.string,
+    method: PropTypes.string,
+    submitButton: PropTypes.object,
+    clearButton: PropTypes.object,
+    onSuccess: PropTypes.func,
+    onError: PropTypes.func,
+    onSubmit: PropTypes.func,
+    onReset: PropTypes.func,
+    isLoading: PropTypes.bool,
+    collapsible: PropTypes.bool
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -106232,10 +106248,11 @@ window.GridFilter = React.createClass({
 });
 
 }).call(this,require("react"),require("react-dom"))
-},{"react":411,"react-dom":402,"realize/mixins/css_class_mixin.jsx":697}],627:[function(require,module,exports){
+},{"prop-types":353,"react":411,"react-dom":402,"realize/mixins/css_class_mixin.jsx":697}],627:[function(require,module,exports){
 (function (React){
 'use strict';
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.GridPagination = React.createClass({
@@ -106243,15 +106260,15 @@ window.GridPagination = React.createClass({
 
   mixins: [CssClassMixin],
   propTypes: {
-    count: React.PropTypes.number,
-    page: React.PropTypes.number,
-    perPage: React.PropTypes.number,
-    window: React.PropTypes.number,
-    onPagination: React.PropTypes.func,
-    onChangePerPage: React.PropTypes.func,
-    pageRowsCount: React.PropTypes.number,
-    type: React.PropTypes.string,
-    perPageOptions: React.PropTypes.array
+    count: PropTypes.number,
+    page: PropTypes.number,
+    perPage: PropTypes.number,
+    window: PropTypes.number,
+    onPagination: PropTypes.func,
+    onChangePerPage: PropTypes.func,
+    pageRowsCount: PropTypes.number,
+    type: PropTypes.string,
+    perPageOptions: PropTypes.array
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -106342,7 +106359,7 @@ window.GridPagination = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411,"realize/mixins/css_class_mixin.jsx":697}],628:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697}],628:[function(require,module,exports){
 (function (React){
 'use strict';
 
@@ -106377,6 +106394,7 @@ window.GridTable = React.createClass({
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var UtilsMixin = require('realize/mixins/utils_mixin.jsx');
 var RestActionsMixin = require('realize/mixins/rest_actions_mixin.jsx');
@@ -106390,35 +106408,35 @@ window.GridForm = React.createClass({
   mixins: [CssClassMixin, UtilsMixin, RestActionsMixin],
 
   propTypes: {
-    clientSide: React.PropTypes.bool,
-    clientSideIdField: React.PropTypes.string,
-    url: React.PropTypes.string,
-    paginationConfigs: React.PropTypes.object,
-    sortConfigs: React.PropTypes.object,
-    sortData: React.PropTypes.object,
-    filter: React.PropTypes.object,
-    columns: React.PropTypes.object,
-    data: React.PropTypes.object,
-    dataRowsParam: React.PropTypes.string,
-    countParam: React.PropTypes.string,
-    actionButtons: React.PropTypes.object,
-    form: React.PropTypes.object,
-    createButton: React.PropTypes.object,
-    updateButton: React.PropTypes.object,
-    cancelButton: React.PropTypes.object,
-    isLoading: React.PropTypes.bool,
-    selectable: React.PropTypes.oneOf(['multiple', 'none', 'one']),
-    eagerLoad: React.PropTypes.bool,
-    readOnly: React.PropTypes.bool,
-    formComponent: React.PropTypes.func,
-    onSubmit: React.PropTypes.func,
-    onReset: React.PropTypes.func,
-    onSuccess: React.PropTypes.func,
-    onError: React.PropTypes.func,
-    onLoadSuccess: React.PropTypes.func,
-    onLoadError: React.PropTypes.func,
-    onDestroySuccess: React.PropTypes.func,
-    onDestroyError: React.PropTypes.func
+    clientSide: PropTypes.bool,
+    clientSideIdField: PropTypes.string,
+    url: PropTypes.string,
+    paginationConfigs: PropTypes.object,
+    sortConfigs: PropTypes.object,
+    sortData: PropTypes.object,
+    filter: PropTypes.object,
+    columns: PropTypes.object,
+    data: PropTypes.object,
+    dataRowsParam: PropTypes.string,
+    countParam: PropTypes.string,
+    actionButtons: PropTypes.object,
+    form: PropTypes.object,
+    createButton: PropTypes.object,
+    updateButton: PropTypes.object,
+    cancelButton: PropTypes.object,
+    isLoading: PropTypes.bool,
+    selectable: PropTypes.oneOf(['multiple', 'none', 'one']),
+    eagerLoad: PropTypes.bool,
+    readOnly: PropTypes.bool,
+    formComponent: PropTypes.func,
+    onSubmit: PropTypes.func,
+    onReset: PropTypes.func,
+    onSuccess: PropTypes.func,
+    onError: PropTypes.func,
+    onLoadSuccess: PropTypes.func,
+    onLoadError: PropTypes.func,
+    onDestroySuccess: PropTypes.func,
+    onDestroyError: PropTypes.func
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -106778,7 +106796,7 @@ window.GridForm = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"lodash/findIndex":165,"lodash/merge":189,"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/rest_actions_mixin.jsx":711,"realize/mixins/utils_mixin.jsx":713}],630:[function(require,module,exports){
+},{"lodash/findIndex":165,"lodash/merge":189,"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/rest_actions_mixin.jsx":711,"realize/mixins/utils_mixin.jsx":713}],630:[function(require,module,exports){
 (function (React){
 'use strict';
 
@@ -106989,6 +107007,7 @@ window.HeaderSection = React.createClass({
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var TooltipMixin = require('realize/mixins/tooltip_mixin.jsx');
 
@@ -106998,7 +107017,7 @@ window.Icon = React.createClass({
   mixins: [CssClassMixin, TooltipMixin],
 
   propTypes: {
-    type: React.PropTypes.string
+    type: PropTypes.string
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -107033,7 +107052,7 @@ window.Icon = React.createClass({
 });
 
 }).call(this,require("react"),require("realize/realize.js"))
-},{"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/tooltip_mixin.jsx":712,"realize/realize.js":717}],635:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/tooltip_mixin.jsx":712,"realize/realize.js":717}],635:[function(require,module,exports){
 (function (React){
 'use strict';
 
@@ -107107,6 +107126,7 @@ window.Spinner = React.createClass({
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var InputComponentMixin = require('realize/mixins/input/input_component_mixin.jsx');
 var SelectComponentMixin = require('realize/mixins/input/select_component_mixin.jsx');
@@ -107118,11 +107138,11 @@ window.InputAutocomplete = React.createClass({
   mixins: [CssClassMixin, InputComponentMixin, SelectComponentMixin, InputSelectActionsListenerMixin],
 
   propTypes: {
-    maxOptions: React.PropTypes.number,
-    maxOptionsParam: React.PropTypes.string,
-    searchParam: React.PropTypes.string,
-    actionButtons: React.PropTypes.array,
-    clientSideSearch: React.PropTypes.bool
+    maxOptions: PropTypes.number,
+    maxOptionsParam: PropTypes.string,
+    searchParam: PropTypes.string,
+    actionButtons: PropTypes.array,
+    clientSideSearch: PropTypes.bool
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -107350,12 +107370,13 @@ window.InputAutocomplete = React.createClass({
 });
 
 }).call(this,require("react"),require("react-dom"))
-},{"react":411,"react-dom":402,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/input/input_component_mixin.jsx":704,"realize/mixins/input/input_select_actions_listener_mixin.jsx":705,"realize/mixins/input/select_component_mixin.jsx":707}],637:[function(require,module,exports){
+},{"prop-types":353,"react":411,"react-dom":402,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/input/input_component_mixin.jsx":704,"realize/mixins/input/input_select_actions_listener_mixin.jsx":705,"realize/mixins/input/select_component_mixin.jsx":707}],637:[function(require,module,exports){
 (function (React){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.InputAutocompleteList = React.createClass({
@@ -107363,12 +107384,12 @@ window.InputAutocompleteList = React.createClass({
 
   mixins: [CssClassMixin],
   propTypes: {
-    id: React.PropTypes.string,
-    selectedOptions: React.PropTypes.array,
-    options: React.PropTypes.array,
-    active: React.PropTypes.number,
-    onSelect: React.PropTypes.func,
-    onOptionMouseEnter: React.PropTypes.func
+    id: PropTypes.string,
+    selectedOptions: PropTypes.array,
+    options: PropTypes.array,
+    active: PropTypes.number,
+    onSelect: PropTypes.func,
+    onOptionMouseEnter: PropTypes.func
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -107448,10 +107469,11 @@ window.InputAutocompleteList = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411,"realize/mixins/css_class_mixin.jsx":697}],638:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697}],638:[function(require,module,exports){
 (function (React){
 'use strict';
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var UtilsMixin = require('realize/mixins/utils_mixin.jsx');
 
@@ -107460,14 +107482,14 @@ window.InputAutocompleteOption = React.createClass({
 
   mixins: [CssClassMixin, UtilsMixin],
   propTypes: {
-    id: React.PropTypes.string,
-    name: React.PropTypes.string,
-    value: React.PropTypes.node,
-    selected: React.PropTypes.bool,
-    position: React.PropTypes.number,
-    isActive: React.PropTypes.bool,
-    onSelect: React.PropTypes.func,
-    onOptionMouseEnter: React.PropTypes.func
+    id: PropTypes.string,
+    name: PropTypes.string,
+    value: PropTypes.node,
+    selected: PropTypes.bool,
+    position: PropTypes.number,
+    isActive: PropTypes.bool,
+    onSelect: PropTypes.func,
+    onOptionMouseEnter: PropTypes.func
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -107538,10 +107560,11 @@ window.InputAutocompleteOption = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/utils_mixin.jsx":713}],639:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/utils_mixin.jsx":713}],639:[function(require,module,exports){
 (function (React,Realize){
 'use strict';
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.InputAutocompleteResult = React.createClass({
@@ -107549,17 +107572,17 @@ window.InputAutocompleteResult = React.createClass({
 
   mixins: [CssClassMixin],
   propTypes: {
-    id: React.PropTypes.string,
-    options: React.PropTypes.array,
-    selectedOptions: React.PropTypes.array,
-    active: React.PropTypes.number,
-    searchValue: React.PropTypes.string,
-    actionButtons: React.PropTypes.array,
-    onKeyDown: React.PropTypes.func,
-    onChange: React.PropTypes.func,
-    onSelect: React.PropTypes.func,
-    onClear: React.PropTypes.func,
-    onOptionMouseEnter: React.PropTypes.func
+    id: PropTypes.string,
+    options: PropTypes.array,
+    selectedOptions: PropTypes.array,
+    active: PropTypes.number,
+    searchValue: PropTypes.string,
+    actionButtons: PropTypes.array,
+    onKeyDown: PropTypes.func,
+    onChange: PropTypes.func,
+    onSelect: PropTypes.func,
+    onClear: PropTypes.func,
+    onOptionMouseEnter: PropTypes.func
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -107663,12 +107686,13 @@ window.InputAutocompleteResult = React.createClass({
 });
 
 }).call(this,require("react"),require("realize/realize.js"))
-},{"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/realize.js":717}],640:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/realize.js":717}],640:[function(require,module,exports){
 (function (React,ReactDOM,Realize){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var UtilsMixin = require('realize/mixins/utils_mixin.jsx');
 var InputComponentMixin = require('realize/mixins/input/input_component_mixin.jsx');
@@ -107679,7 +107703,7 @@ window.InputAutocompleteSelect = React.createClass({
   mixins: [CssClassMixin, UtilsMixin, InputComponentMixin],
 
   propTypes: {
-    selectedOptions: React.PropTypes.array,
+    selectedOptions: PropTypes.array,
     placeholder: Realize.PropTypes.localizedString
   },
 
@@ -107744,7 +107768,7 @@ window.InputAutocompleteSelect = React.createClass({
 });
 
 }).call(this,require("react"),require("react-dom"),require("realize/realize.js"))
-},{"react":411,"react-dom":402,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/input/input_component_mixin.jsx":704,"realize/mixins/utils_mixin.jsx":713,"realize/realize.js":717}],641:[function(require,module,exports){
+},{"prop-types":353,"react":411,"react-dom":402,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/input/input_component_mixin.jsx":704,"realize/mixins/utils_mixin.jsx":713,"realize/realize.js":717}],641:[function(require,module,exports){
 (function (React){
 "use strict";
 
@@ -107814,6 +107838,7 @@ window.InputAutocompleteValues = React.createClass({
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var InputComponentMixin = require('realize/mixins/input/input_component_mixin.jsx');
 var CheckboxComponentMixin = require('realize/mixins/input/checkbox_component_mixin.jsx');
@@ -107824,7 +107849,7 @@ window.InputCheckbox = React.createClass({
   mixins: [CssClassMixin, InputComponentMixin, CheckboxComponentMixin],
 
   propTypes: {
-    renderAsIndeterminate: React.PropTypes.bool
+    renderAsIndeterminate: PropTypes.bool
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -107846,12 +107871,13 @@ window.InputCheckbox = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/input/checkbox_component_mixin.jsx":703,"realize/mixins/input/input_component_mixin.jsx":704}],643:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/input/checkbox_component_mixin.jsx":703,"realize/mixins/input/input_component_mixin.jsx":704}],643:[function(require,module,exports){
 (function (React){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var InputComponentMixin = require('realize/mixins/input/input_component_mixin.jsx');
 var SelectComponentMixin = require('realize/mixins/input/select_component_mixin.jsx');
@@ -107862,9 +107888,9 @@ window.InputCheckboxGroup = React.createClass({
   mixins: [CssClassMixin, InputComponentMixin, SelectComponentMixin],
 
   propTypes: {
-    name: React.PropTypes.string,
-    align: React.PropTypes.oneOf(['vertical', 'horizontal']),
-    currentValues: React.PropTypes.string
+    name: PropTypes.string,
+    align: PropTypes.oneOf(['vertical', 'horizontal']),
+    currentValues: PropTypes.string
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -107926,12 +107952,13 @@ window.InputCheckboxGroup = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/input/input_component_mixin.jsx":704,"realize/mixins/input/select_component_mixin.jsx":707}],644:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/input/input_component_mixin.jsx":704,"realize/mixins/input/select_component_mixin.jsx":707}],644:[function(require,module,exports){
 (function (React,ReactDOM){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.InputDatefilter = React.createClass({
@@ -107939,15 +107966,15 @@ window.InputDatefilter = React.createClass({
 
   mixins: [CssClassMixin],
   propTypes: {
-    originalId: React.PropTypes.string,
-    originalName: React.PropTypes.string,
-    id: React.PropTypes.string,
-    name: React.PropTypes.string,
-    resource: React.PropTypes.string,
-    disabled: React.PropTypes.bool,
-    fromFilterInput: React.PropTypes.object,
-    toFilterInput: React.PropTypes.object,
-    okButton: React.PropTypes.object
+    originalId: PropTypes.string,
+    originalName: PropTypes.string,
+    id: PropTypes.string,
+    name: PropTypes.string,
+    resource: PropTypes.string,
+    disabled: PropTypes.bool,
+    fromFilterInput: PropTypes.object,
+    toFilterInput: PropTypes.object,
+    okButton: PropTypes.object
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -108041,12 +108068,13 @@ window.InputDatefilter = React.createClass({
 });
 
 }).call(this,require("react"),require("react-dom"))
-},{"react":411,"react-dom":402,"realize/mixins/css_class_mixin.jsx":697}],645:[function(require,module,exports){
+},{"prop-types":353,"react":411,"react-dom":402,"realize/mixins/css_class_mixin.jsx":697}],645:[function(require,module,exports){
 (function (React,ReactDOM,Realize){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.InputDatefilterBody = React.createClass({
@@ -108054,11 +108082,11 @@ window.InputDatefilterBody = React.createClass({
 
   mixins: [CssClassMixin],
   propTypes: {
-    id: React.PropTypes.string,
-    name: React.PropTypes.string,
-    fromFilterInput: React.PropTypes.object,
-    toFilterInput: React.PropTypes.object,
-    okButton: React.PropTypes.object
+    id: PropTypes.string,
+    name: PropTypes.string,
+    fromFilterInput: PropTypes.object,
+    toFilterInput: PropTypes.object,
+    okButton: PropTypes.object
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -108215,12 +108243,13 @@ window.InputDatefilterBody = React.createClass({
 });
 
 }).call(this,require("react"),require("react-dom"),require("realize/realize.js"))
-},{"react":411,"react-dom":402,"realize/mixins/css_class_mixin.jsx":697,"realize/realize.js":717}],646:[function(require,module,exports){
+},{"prop-types":353,"react":411,"react-dom":402,"realize/mixins/css_class_mixin.jsx":697,"realize/realize.js":717}],646:[function(require,module,exports){
 (function (React,ReactDOM,Realize){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var UtilsMixin = require('realize/mixins/utils_mixin.jsx');
 var InputComponentMixin = require('realize/mixins/input/input_component_mixin.jsx');
@@ -108231,9 +108260,9 @@ window.InputDatefilterSelect = React.createClass({
   mixins: [CssClassMixin, UtilsMixin, InputComponentMixin],
 
   propTypes: {
-    selectedDates: React.PropTypes.array,
+    selectedDates: PropTypes.array,
     placeholder: Realize.PropTypes.localizedString,
-    onBlur: React.PropTypes.func
+    onBlur: PropTypes.func
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -108288,12 +108317,13 @@ window.InputDatefilterSelect = React.createClass({
 });
 
 }).call(this,require("react"),require("react-dom"),require("realize/realize.js"))
-},{"react":411,"react-dom":402,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/input/input_component_mixin.jsx":704,"realize/mixins/utils_mixin.jsx":713,"realize/realize.js":717}],647:[function(require,module,exports){
+},{"prop-types":353,"react":411,"react-dom":402,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/input/input_component_mixin.jsx":704,"realize/mixins/utils_mixin.jsx":713,"realize/realize.js":717}],647:[function(require,module,exports){
 (function (React){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var InputComponentMixin = require('realize/mixins/input/input_component_mixin.jsx');
 
@@ -108306,13 +108336,13 @@ window.InputGridForm = React.createClass({
   mixins: [CssClassMixin, InputComponentMixin],
 
   propTypes: {
-    label: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.bool]),
-    fields: React.PropTypes.object,
-    form: React.PropTypes.object,
-    clientSide: React.PropTypes.bool,
-    inputWrapperComponent: React.PropTypes.oneOfType([React.PropTypes.func, React.PropTypes.element, React.PropTypes.string]),
-    onSuccess: React.PropTypes.func,
-    onDestroySuccess: React.PropTypes.func
+    label: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+    fields: PropTypes.object,
+    form: PropTypes.object,
+    clientSide: PropTypes.bool,
+    inputWrapperComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.element, PropTypes.string]),
+    onSuccess: PropTypes.func,
+    onDestroySuccess: PropTypes.func
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -108446,12 +108476,13 @@ window.InputGridForm = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"lodash/mapValues":187,"lodash/merge":189,"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/input/input_component_mixin.jsx":704}],648:[function(require,module,exports){
+},{"lodash/mapValues":187,"lodash/merge":189,"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/input/input_component_mixin.jsx":704}],648:[function(require,module,exports){
 (function (React){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.InputGridFormFields = React.createClass({
@@ -108460,17 +108491,17 @@ window.InputGridFormFields = React.createClass({
   mixins: [CssClassMixin],
 
   propTypes: {
-    id: React.PropTypes.string,
-    inputs: React.PropTypes.object,
-    data: React.PropTypes.object,
-    style: React.PropTypes.string,
-    resource: React.PropTypes.string,
-    disabled: React.PropTypes.bool,
-    readOnly: React.PropTypes.bool,
-    submitButton: React.PropTypes.oneOfType([React.PropTypes.object, React.PropTypes.bool]),
-    otherButtons: React.PropTypes.array,
-    onSubmit: React.PropTypes.func,
-    onReset: React.PropTypes.func
+    id: PropTypes.string,
+    inputs: PropTypes.object,
+    data: PropTypes.object,
+    style: PropTypes.string,
+    resource: PropTypes.string,
+    disabled: PropTypes.bool,
+    readOnly: PropTypes.bool,
+    submitButton: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
+    otherButtons: PropTypes.array,
+    onSubmit: PropTypes.func,
+    onReset: PropTypes.func
   },
 
   getInitialState: function getInitialState() {
@@ -108579,12 +108610,13 @@ window.InputGridFormFields = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411,"realize/mixins/css_class_mixin.jsx":697}],649:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697}],649:[function(require,module,exports){
 (function (React,Realize){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.Input = React.createClass({
@@ -108593,18 +108625,18 @@ window.Input = React.createClass({
   mixins: [CssClassMixin],
 
   propTypes: {
-    id: React.PropTypes.string,
-    name: React.PropTypes.string,
-    label: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.bool]),
-    value: React.PropTypes.any,
-    component: React.PropTypes.string,
-    formStyle: React.PropTypes.oneOf(['default', 'filter', 'oneLine']),
-    data: React.PropTypes.object,
-    errors: React.PropTypes.oneOfType([React.PropTypes.object, React.PropTypes.array]),
-    resource: React.PropTypes.string,
-    scope: React.PropTypes.oneOf(['resource', 'global']),
-    maxLength: React.PropTypes.number,
-    renderLabel: React.PropTypes.bool
+    id: PropTypes.string,
+    name: PropTypes.string,
+    label: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+    value: PropTypes.any,
+    component: PropTypes.string,
+    formStyle: PropTypes.oneOf(['default', 'filter', 'oneLine']),
+    data: PropTypes.object,
+    errors: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+    resource: PropTypes.string,
+    scope: PropTypes.oneOf(['resource', 'global']),
+    maxLength: PropTypes.number,
+    renderLabel: PropTypes.bool
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -108842,12 +108874,13 @@ window.Input = React.createClass({
 });
 
 }).call(this,require("react"),require("realize/realize.js"))
-},{"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/realize.js":717}],650:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/realize.js":717}],650:[function(require,module,exports){
 (function (React){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
 var ColorPicker = require('react-color').default;
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var InputComponentMixin = require('realize/mixins/input/input_component_mixin.jsx');
@@ -108857,7 +108890,7 @@ window.InputColorpicker = React.createClass({
 
   mixins: [CssClassMixin, InputComponentMixin],
   propTypes: {
-    type: React.PropTypes.string
+    type: PropTypes.string
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -108943,12 +108976,13 @@ window.InputColorpicker = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411,"react-color":392,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/input/input_component_mixin.jsx":704}],651:[function(require,module,exports){
+},{"prop-types":353,"react":411,"react-color":392,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/input/input_component_mixin.jsx":704}],651:[function(require,module,exports){
 (function (React,ReactDOM,Realize){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var InputComponentMixin = require('realize/mixins/input/input_component_mixin.jsx');
 
@@ -108959,7 +108993,7 @@ window.InputDatepicker = React.createClass({
 
   mixins: [CssClassMixin, InputComponentMixin, UtilsMixin],
   propTypes: {
-    mask: React.PropTypes.string
+    mask: PropTypes.string
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -109090,10 +109124,11 @@ window.InputDatepicker = React.createClass({
 });
 
 }).call(this,require("react"),require("react-dom"),require("realize/realize.js"))
-},{"react":411,"react-dom":402,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/input/input_component_mixin.jsx":704,"realize/momentWithLocale.js":714,"realize/realize.js":717}],652:[function(require,module,exports){
+},{"prop-types":353,"react":411,"react-dom":402,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/input/input_component_mixin.jsx":704,"realize/momentWithLocale.js":714,"realize/realize.js":717}],652:[function(require,module,exports){
 (function (React){
 'use strict';
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.InputError = React.createClass({
@@ -109102,7 +109137,7 @@ window.InputError = React.createClass({
   mixins: [CssClassMixin],
 
   propTypes: {
-    errors: React.PropTypes.oneOfType([React.PropTypes.object, React.PropTypes.array])
+    errors: PropTypes.oneOfType([PropTypes.object, PropTypes.array])
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -109138,12 +109173,13 @@ window.InputError = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411,"realize/mixins/css_class_mixin.jsx":697}],653:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697}],653:[function(require,module,exports){
 (function (React,ReactDOM,Realize){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var InputComponentMixin = require('realize/mixins/input/input_component_mixin.jsx');
 
@@ -109152,13 +109188,13 @@ window.InputFile = React.createClass({
 
   mixins: [CssClassMixin, InputComponentMixin],
   propTypes: {
-    wrapperClassName: React.PropTypes.string,
-    buttonClassName: React.PropTypes.string,
+    wrapperClassName: PropTypes.string,
+    buttonClassName: PropTypes.string,
     buttonName: Realize.PropTypes.localizedString,
-    buttonIcon: React.PropTypes.string,
-    filePathWrapperClassName: React.PropTypes.string,
-    filePathField: React.PropTypes.string,
-    data: React.PropTypes.object
+    buttonIcon: PropTypes.string,
+    filePathWrapperClassName: PropTypes.string,
+    filePathField: PropTypes.string,
+    data: PropTypes.object
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -109272,7 +109308,7 @@ window.InputFile = React.createClass({
 });
 
 }).call(this,require("react"),require("react-dom"),require("realize/realize.js"))
-},{"react":411,"react-dom":402,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/input/input_component_mixin.jsx":704,"realize/realize.js":717}],654:[function(require,module,exports){
+},{"prop-types":353,"react":411,"react-dom":402,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/input/input_component_mixin.jsx":704,"realize/realize.js":717}],654:[function(require,module,exports){
 (function (React){
 "use strict";
 
@@ -109299,6 +109335,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var InputComponentMixin = require('realize/mixins/input/input_component_mixin.jsx');
 
@@ -109308,15 +109345,15 @@ window.InputMasked = React.createClass({
   mixins: [CssClassMixin, InputComponentMixin],
 
   propTypes: {
-    type: React.PropTypes.string,
-    mask: React.PropTypes.string,
-    maskType: React.PropTypes.string,
-    regex: React.PropTypes.string,
-    autoUnmask: React.PropTypes.bool,
-    removeMaskOnChange: React.PropTypes.bool,
-    onComplete: React.PropTypes.func,
-    onIncomplete: React.PropTypes.func,
-    onCleared: React.PropTypes.func
+    type: PropTypes.string,
+    mask: PropTypes.string,
+    maskType: PropTypes.string,
+    regex: PropTypes.string,
+    autoUnmask: PropTypes.bool,
+    removeMaskOnChange: PropTypes.bool,
+    onComplete: PropTypes.func,
+    onIncomplete: PropTypes.func,
+    onCleared: PropTypes.func
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -109517,7 +109554,7 @@ window.InputMasked = React.createClass({
 });
 
 }).call(this,require("react"),require("react-dom"),require("realize/realize.js"))
-},{"react":411,"react-dom":402,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/input/input_component_mixin.jsx":704,"realize/realize.js":717}],656:[function(require,module,exports){
+},{"prop-types":353,"react":411,"react-dom":402,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/input/input_component_mixin.jsx":704,"realize/realize.js":717}],656:[function(require,module,exports){
 (function (React){
 'use strict';
 
@@ -109565,6 +109602,7 @@ window.InputNumber = React.createClass({
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var InputComponentMixin = require('realize/mixins/input/input_component_mixin.jsx');
 
@@ -109573,7 +109611,7 @@ window.InputPassword = React.createClass({
 
   mixins: [CssClassMixin, InputComponentMixin],
   propTypes: {
-    confirms: React.PropTypes.string
+    confirms: PropTypes.string
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -109594,12 +109632,13 @@ window.InputPassword = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/input/input_component_mixin.jsx":704}],658:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/input/input_component_mixin.jsx":704}],658:[function(require,module,exports){
 (function (React,Realize){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var InputComponentMixin = require('realize/mixins/input/input_component_mixin.jsx');
 var CheckboxComponentMixin = require('realize/mixins/input/checkbox_component_mixin.jsx');
@@ -109610,7 +109649,7 @@ window.InputSwitch = React.createClass({
   mixins: [CssClassMixin, InputComponentMixin, CheckboxComponentMixin],
 
   propTypes: {
-    label: React.PropTypes.string,
+    label: PropTypes.string,
     offLabel: Realize.PropTypes.localizedString,
     onLabel: Realize.PropTypes.localizedString
   },
@@ -109679,12 +109718,13 @@ window.InputSwitch = React.createClass({
 });
 
 }).call(this,require("react"),require("realize/realize.js"))
-},{"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/input/checkbox_component_mixin.jsx":703,"realize/mixins/input/input_component_mixin.jsx":704,"realize/realize.js":717}],659:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/input/checkbox_component_mixin.jsx":703,"realize/mixins/input/input_component_mixin.jsx":704,"realize/realize.js":717}],659:[function(require,module,exports){
 (function (React){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var InputComponentMixin = require('realize/mixins/input/input_component_mixin.jsx');
 
@@ -109693,7 +109733,7 @@ window.InputText = React.createClass({
 
   mixins: [CssClassMixin, InputComponentMixin],
   propTypes: {
-    type: React.PropTypes.string
+    type: PropTypes.string
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -109716,12 +109756,13 @@ window.InputText = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/input/input_component_mixin.jsx":704}],660:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/input/input_component_mixin.jsx":704}],660:[function(require,module,exports){
 (function (React){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var InputComponentMixin = require('realize/mixins/input/input_component_mixin.jsx');
 
@@ -109730,7 +109771,7 @@ window.InputTextarea = React.createClass({
 
   mixins: [CssClassMixin, InputComponentMixin],
   propTypes: {
-    rows: React.PropTypes.number
+    rows: PropTypes.number
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -109753,12 +109794,13 @@ window.InputTextarea = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/input/input_component_mixin.jsx":704}],661:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/input/input_component_mixin.jsx":704}],661:[function(require,module,exports){
 (function (React){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var InputComponentMixin = require('realize/mixins/input/input_component_mixin.jsx');
 var SelectComponentMixin = require('realize/mixins/input/select_component_mixin.jsx');
@@ -109769,10 +109811,10 @@ window.InputRadioGroup = React.createClass({
   mixins: [CssClassMixin, InputComponentMixin, SelectComponentMixin],
 
   propTypes: {
-    name: React.PropTypes.string,
-    align: React.PropTypes.oneOf(['vertical', 'horizontal']),
-    currentValue: React.PropTypes.string,
-    withGap: React.PropTypes.bool
+    name: PropTypes.string,
+    align: PropTypes.oneOf(['vertical', 'horizontal']),
+    currentValue: PropTypes.string,
+    withGap: PropTypes.bool
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -109823,12 +109865,13 @@ window.InputRadioGroup = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/input/input_component_mixin.jsx":704,"realize/mixins/input/select_component_mixin.jsx":707}],662:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/input/input_component_mixin.jsx":704,"realize/mixins/input/select_component_mixin.jsx":707}],662:[function(require,module,exports){
 (function (React,ReactDOM,Realize){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var InputComponentMixin = require('realize/mixins/input/input_component_mixin.jsx');
 var SelectComponentMixin = require('realize/mixins/input/select_component_mixin.jsx');
@@ -109841,7 +109884,7 @@ window.InputSelect = React.createClass({
   mixins: [CssClassMixin, InputComponentMixin, SelectComponentMixin, InputSelectActionsListenerMixin, MaterializeSelectMixin],
 
   propTypes: {
-    includeBlank: React.PropTypes.bool,
+    includeBlank: PropTypes.bool,
     blankText: Realize.PropTypes.localizedString
   },
 
@@ -109926,7 +109969,7 @@ window.InputSelect = React.createClass({
 });
 
 }).call(this,require("react"),require("react-dom"),require("realize/realize.js"))
-},{"react":411,"react-dom":402,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/input/input_component_mixin.jsx":704,"realize/mixins/input/input_select_actions_listener_mixin.jsx":705,"realize/mixins/input/materialize_select_mixin.jsx":706,"realize/mixins/input/select_component_mixin.jsx":707,"realize/realize.js":717}],663:[function(require,module,exports){
+},{"prop-types":353,"react":411,"react-dom":402,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/input/input_component_mixin.jsx":704,"realize/mixins/input/input_select_actions_listener_mixin.jsx":705,"realize/mixins/input/materialize_select_mixin.jsx":706,"realize/mixins/input/select_component_mixin.jsx":707,"realize/realize.js":717}],663:[function(require,module,exports){
 (function (React){
 "use strict";
 
@@ -109952,6 +109995,7 @@ window.InputSelectOption = React.createClass({
 (function (React){
 'use strict';
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.Label = React.createClass({
@@ -109959,12 +110003,12 @@ window.Label = React.createClass({
 
   mixins: [CssClassMixin],
   propTypes: {
-    id: React.PropTypes.string,
-    name: React.PropTypes.string,
-    label: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.bool]),
-    active: React.PropTypes.bool,
-    onClick: React.PropTypes.func,
-    required: React.PropTypes.bool
+    id: PropTypes.string,
+    name: PropTypes.string,
+    label: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+    active: PropTypes.bool,
+    onClick: PropTypes.func,
+    required: PropTypes.bool
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -110015,7 +110059,7 @@ window.Label = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411,"realize/mixins/css_class_mixin.jsx":697}],665:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697}],665:[function(require,module,exports){
 (function (React){
 'use strict';
 
@@ -110111,6 +110155,7 @@ window.MenuItem = React.createClass({
 
 var ModalStore = require('realize/stores/modal_store.js');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
+var PropTypes = require('prop-types');
 var ContainerMixin = require('realize/mixins/container_mixin.jsx');
 
 window.Modal = React.createClass({
@@ -110119,19 +110164,19 @@ window.Modal = React.createClass({
   mixins: [Reflux.connect(ModalStore, 'modalStore'), CssClassMixin, ContainerMixin],
 
   propTypes: {
-    id: React.PropTypes.string,
-    opened: React.PropTypes.bool,
-    marginHeaderFooter: React.PropTypes.number,
-    width: React.PropTypes.string,
-    minContentHeight: React.PropTypes.number,
-    useAvailableHeight: React.PropTypes.bool,
+    id: PropTypes.string,
+    opened: PropTypes.bool,
+    marginHeaderFooter: PropTypes.number,
+    width: PropTypes.string,
+    minContentHeight: PropTypes.number,
+    useAvailableHeight: PropTypes.bool,
 
-    dismissible: React.PropTypes.bool,
-    opacity: React.PropTypes.number,
-    inDuration: React.PropTypes.number,
-    outDuration: React.PropTypes.number,
-    ready: React.PropTypes.func,
-    complete: React.PropTypes.func
+    dismissible: PropTypes.bool,
+    opacity: PropTypes.number,
+    inDuration: PropTypes.number,
+    outDuration: PropTypes.number,
+    ready: PropTypes.func,
+    complete: PropTypes.func
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -110327,12 +110372,13 @@ window.Modal = React.createClass({
 });
 
 }).call(this,require("react"),require("react-dom"),require("reflux"))
-},{"react":411,"react-dom":402,"realize/mixins/container_mixin.jsx":696,"realize/mixins/css_class_mixin.jsx":697,"realize/stores/modal_store.js":721,"reflux":599}],668:[function(require,module,exports){
+},{"prop-types":353,"react":411,"react-dom":402,"realize/mixins/container_mixin.jsx":696,"realize/mixins/css_class_mixin.jsx":697,"realize/stores/modal_store.js":721,"reflux":599}],668:[function(require,module,exports){
 (function (React){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.ModalButton = React.createClass({
@@ -110341,8 +110387,8 @@ window.ModalButton = React.createClass({
   mixins: [CssClassMixin],
 
   propTypes: {
-    modalId: React.PropTypes.string,
-    openerId: React.PropTypes.string
+    modalId: PropTypes.string,
+    openerId: PropTypes.string
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -110378,7 +110424,7 @@ window.ModalButton = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411,"realize/mixins/css_class_mixin.jsx":697}],669:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697}],669:[function(require,module,exports){
 (function (React){
 'use strict';
 
@@ -110409,6 +110455,7 @@ window.ModalContent = React.createClass({
 (function (React,Realize){
 'use strict';
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.ModalFooter = React.createClass({
@@ -110417,8 +110464,8 @@ window.ModalFooter = React.createClass({
   mixins: [CssClassMixin],
 
   propTypes: {
-    separatorThemeClassKey: React.PropTypes.string,
-    withSeparator: React.PropTypes.bool
+    separatorThemeClassKey: PropTypes.string,
+    withSeparator: PropTypes.bool
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -110448,13 +110495,14 @@ window.ModalFooter = React.createClass({
 });
 
 }).call(this,require("react"),require("realize/realize.js"))
-},{"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/realize.js":717}],671:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/realize.js":717}],671:[function(require,module,exports){
 (function (React){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
+var PropTypes = require('prop-types');
 var ContainerMixin = require('realize/mixins/container_mixin.jsx');
 
 window.ModalForm = React.createClass({
@@ -110463,8 +110511,8 @@ window.ModalForm = React.createClass({
   mixins: [CssClassMixin, ContainerMixin],
 
   propTypes: {
-    title: React.PropTypes.string,
-    form: React.PropTypes.object
+    title: PropTypes.string,
+    form: PropTypes.object
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -110583,10 +110631,11 @@ window.ModalForm = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411,"realize/mixins/container_mixin.jsx":696,"realize/mixins/css_class_mixin.jsx":697}],672:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/container_mixin.jsx":696,"realize/mixins/css_class_mixin.jsx":697}],672:[function(require,module,exports){
 (function (React,Realize){
 'use strict';
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.ModalHeader = React.createClass({
@@ -110595,7 +110644,7 @@ window.ModalHeader = React.createClass({
   mixins: [CssClassMixin],
 
   propTypes: {
-    withTitle: React.PropTypes.bool
+    withTitle: PropTypes.bool
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -110624,7 +110673,7 @@ window.ModalHeader = React.createClass({
 });
 
 }).call(this,require("react"),require("realize/realize.js"))
-},{"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/realize.js":717}],673:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/realize.js":717}],673:[function(require,module,exports){
 (function (React,ReactDOM){
 'use strict';
 
@@ -110805,6 +110854,7 @@ var NotificationNumber = React.createClass({
 'use strict';
 
 var RequestHandlerMixin = require('realize/mixins/request_handler_mixin.jsx');
+var PropTypes = require('prop-types');
 var ModalRendererMixin = require('realize/mixins/modal_renderer_mixin.jsx');
 var moment = require('moment');
 
@@ -110814,11 +110864,11 @@ window.NotificationsList = React.createClass({
   mixins: [RequestHandlerMixin, ModalRendererMixin],
 
   propTypes: {
-    className: React.PropTypes.string,
-    active: React.PropTypes.bool,
-    notifications: React.PropTypes.array,
-    handleClickItem: React.PropTypes.func,
-    baseUrl: React.PropTypes.string
+    className: PropTypes.string,
+    active: PropTypes.bool,
+    notifications: PropTypes.array,
+    handleClickItem: PropTypes.func,
+    baseUrl: PropTypes.string
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -110928,10 +110978,11 @@ window.NotificationsList = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"moment":316,"react":411,"realize/mixins/modal_renderer_mixin.jsx":709,"realize/mixins/request_handler_mixin.jsx":710}],675:[function(require,module,exports){
+},{"moment":316,"prop-types":353,"react":411,"realize/mixins/modal_renderer_mixin.jsx":709,"realize/mixins/request_handler_mixin.jsx":710}],675:[function(require,module,exports){
 (function (React){
 'use strict';
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.Pagination = React.createClass({
@@ -110940,12 +110991,12 @@ window.Pagination = React.createClass({
   mixins: [CssClassMixin],
 
   propTypes: {
-    count: React.PropTypes.number,
-    page: React.PropTypes.number,
-    perPage: React.PropTypes.number,
-    window: React.PropTypes.number,
-    onPagination: React.PropTypes.func,
-    type: React.PropTypes.string
+    count: PropTypes.number,
+    page: PropTypes.number,
+    perPage: PropTypes.number,
+    window: PropTypes.number,
+    onPagination: PropTypes.func,
+    type: PropTypes.string
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -111061,10 +111112,11 @@ window.Pagination = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411,"realize/mixins/css_class_mixin.jsx":697}],676:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697}],676:[function(require,module,exports){
 (function (React){
 'use strict';
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.PaginationItem = React.createClass({
@@ -111073,11 +111125,11 @@ window.PaginationItem = React.createClass({
   mixins: [CssClassMixin],
 
   propTypes: {
-    disabled: React.PropTypes.bool,
-    active: React.PropTypes.bool,
-    iconType: React.PropTypes.string,
-    text: React.PropTypes.string,
-    onClick: React.PropTypes.func
+    disabled: PropTypes.bool,
+    active: PropTypes.bool,
+    iconType: PropTypes.string,
+    text: PropTypes.string,
+    onClick: PropTypes.func
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -111143,10 +111195,11 @@ window.PaginationItem = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411,"realize/mixins/css_class_mixin.jsx":697}],677:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697}],677:[function(require,module,exports){
 (function (React,ReactDOM){
 'use strict';
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.SideNav = React.createClass({
@@ -111155,11 +111208,11 @@ window.SideNav = React.createClass({
   mixins: [CssClassMixin],
 
   propTypes: {
-    items: React.PropTypes.array,
-    icon: React.PropTypes.string,
-    iconAlign: React.PropTypes.string,
-    text: React.PropTypes.string,
-    ref_id: React.PropTypes.string
+    items: PropTypes.array,
+    icon: PropTypes.string,
+    iconAlign: PropTypes.string,
+    text: PropTypes.string,
+    ref_id: PropTypes.string
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -111208,12 +111261,13 @@ window.SideNav = React.createClass({
 });
 
 }).call(this,require("react"),require("react-dom"))
-},{"react":411,"react-dom":402,"realize/mixins/css_class_mixin.jsx":697}],678:[function(require,module,exports){
+},{"prop-types":353,"react":411,"react-dom":402,"realize/mixins/css_class_mixin.jsx":697}],678:[function(require,module,exports){
 (function (React,ReactDOM,Realize){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.Table = React.createClass({
@@ -111221,29 +111275,29 @@ window.Table = React.createClass({
 
   mixins: [CssClassMixin],
   propTypes: {
-    resource: React.PropTypes.string,
-    columns: React.PropTypes.object,
-    dataRowIdField: React.PropTypes.string,
-    selectedRowIdsParam: React.PropTypes.string,
-    selectable: React.PropTypes.oneOf(['multiple', 'none', 'one']),
-    sortConfigs: React.PropTypes.object,
-    sortData: React.PropTypes.object,
-    dataRows: React.PropTypes.array,
-    count: React.PropTypes.number,
-    selectedRowIds: React.PropTypes.array,
-    allSelected: React.PropTypes.bool,
-    allSelectedData: React.PropTypes.object,
+    resource: PropTypes.string,
+    columns: PropTypes.object,
+    dataRowIdField: PropTypes.string,
+    selectedRowIdsParam: PropTypes.string,
+    selectable: PropTypes.oneOf(['multiple', 'none', 'one']),
+    sortConfigs: PropTypes.object,
+    sortData: PropTypes.object,
+    dataRows: PropTypes.array,
+    count: PropTypes.number,
+    selectedRowIds: PropTypes.array,
+    allSelected: PropTypes.bool,
+    allSelectedData: PropTypes.object,
     emptyMessage: Realize.PropTypes.localizedString,
-    actionButtons: React.PropTypes.object,
-    onSort: React.PropTypes.func,
-    onSelect: React.PropTypes.func,
-    onRemoveSelection: React.PropTypes.func,
-    onSelectAll: React.PropTypes.func,
-    rowSelectableFilter: React.PropTypes.func,
-    forceShowSelectAllButton: React.PropTypes.bool,
-    onClickRow: React.PropTypes.func,
-    rowHref: React.PropTypes.string,
-    tableRowCssClass: React.PropTypes.func
+    actionButtons: PropTypes.object,
+    onSort: PropTypes.func,
+    onSelect: PropTypes.func,
+    onRemoveSelection: PropTypes.func,
+    onSelectAll: PropTypes.func,
+    rowSelectableFilter: PropTypes.func,
+    forceShowSelectAllButton: PropTypes.bool,
+    onClickRow: PropTypes.func,
+    rowHref: PropTypes.string,
+    tableRowCssClass: PropTypes.func
   },
 
   sortConfigs: null,
@@ -111549,10 +111603,11 @@ window.Table = React.createClass({
 });
 
 }).call(this,require("react"),require("react-dom"),require("realize/realize.js"))
-},{"react":411,"react-dom":402,"realize/mixins/css_class_mixin.jsx":697,"realize/realize.js":717}],679:[function(require,module,exports){
+},{"prop-types":353,"react":411,"react-dom":402,"realize/mixins/css_class_mixin.jsx":697,"realize/realize.js":717}],679:[function(require,module,exports){
 (function (React){
 'use strict';
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var RequestHandlerMixin = require('realize/mixins/request_handler_mixin.jsx');
 
@@ -111562,18 +111617,18 @@ window.TableActionButton = React.createClass({
   mixins: [CssClassMixin, RequestHandlerMixin],
 
   propTypes: {
-    selectedRowIds: React.PropTypes.array,
-    selectedRowIdsParam: React.PropTypes.string,
-    allSelected: React.PropTypes.bool,
-    allSelectedData: React.PropTypes.object,
-    count: React.PropTypes.number,
-    actionUrl: React.PropTypes.string,
-    method: React.PropTypes.string,
-    disabled: React.PropTypes.bool,
-    selectionContext: React.PropTypes.oneOf(['none', 'atLeastOne']),
-    conditionToShowActionButton: React.PropTypes.func,
-    component: React.PropTypes.string,
-    params: React.PropTypes.object
+    selectedRowIds: PropTypes.array,
+    selectedRowIdsParam: PropTypes.string,
+    allSelected: PropTypes.bool,
+    allSelectedData: PropTypes.object,
+    count: PropTypes.number,
+    actionUrl: PropTypes.string,
+    method: PropTypes.string,
+    disabled: PropTypes.bool,
+    selectionContext: PropTypes.oneOf(['none', 'atLeastOne']),
+    conditionToShowActionButton: PropTypes.func,
+    component: PropTypes.string,
+    params: PropTypes.object
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -111692,12 +111747,13 @@ window.TableActionButton = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/request_handler_mixin.jsx":710}],680:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/request_handler_mixin.jsx":710}],680:[function(require,module,exports){
 (function (React){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.TableActions = React.createClass({
@@ -111706,17 +111762,17 @@ window.TableActions = React.createClass({
   mixins: [CssClassMixin],
 
   propTypes: {
-    dataRows: React.PropTypes.array,
-    selectable: React.PropTypes.oneOf(['multiple', 'none', 'one']),
-    selectedRowIds: React.PropTypes.array,
-    selectedRowIdsParam: React.PropTypes.string,
-    actionButtons: React.PropTypes.array,
-    allSelected: React.PropTypes.bool,
-    count: React.PropTypes.number,
-    onRemoveSelection: React.PropTypes.func,
-    onSelectAll: React.PropTypes.func,
-    rowSelectableFilter: React.PropTypes.func,
-    forceShowSelectAllButton: React.PropTypes.bool
+    dataRows: PropTypes.array,
+    selectable: PropTypes.oneOf(['multiple', 'none', 'one']),
+    selectedRowIds: PropTypes.array,
+    selectedRowIdsParam: PropTypes.string,
+    actionButtons: PropTypes.array,
+    allSelected: PropTypes.bool,
+    count: PropTypes.number,
+    onRemoveSelection: PropTypes.func,
+    onSelectAll: PropTypes.func,
+    rowSelectableFilter: PropTypes.func,
+    forceShowSelectAllButton: PropTypes.bool
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -111764,10 +111820,11 @@ window.TableActions = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411,"realize/mixins/css_class_mixin.jsx":697}],681:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697}],681:[function(require,module,exports){
 (function (React,Realize){
 'use strict';
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var moment = require('moment');
 var numeral = require('realize/numeralWithLocale.js');
@@ -111778,13 +111835,13 @@ window.TableCell = React.createClass({
   mixins: [CssClassMixin],
 
   propTypes: {
-    name: React.PropTypes.string,
-    data: React.PropTypes.object,
-    dataRowIdField: React.PropTypes.string,
-    value: React.PropTypes.func,
-    format: React.PropTypes.oneOf(['text', 'currency', 'number', 'percentage', 'boolean', 'date', 'datetime', 'time']),
-    formatString: React.PropTypes.string,
-    component: React.PropTypes.string
+    name: PropTypes.string,
+    data: PropTypes.object,
+    dataRowIdField: PropTypes.string,
+    value: PropTypes.func,
+    format: PropTypes.oneOf(['text', 'currency', 'number', 'percentage', 'boolean', 'date', 'datetime', 'time']),
+    formatString: PropTypes.string,
+    component: PropTypes.string
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -111908,10 +111965,11 @@ window.TableCell = React.createClass({
 });
 
 }).call(this,require("react"),require("realize/realize.js"))
-},{"moment":316,"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/numeralWithLocale.js":715,"realize/realize.js":717}],682:[function(require,module,exports){
+},{"moment":316,"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/numeralWithLocale.js":715,"realize/realize.js":717}],682:[function(require,module,exports){
 (function (React,Realize){
 'use strict';
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var LocalizedResourceFieldMixin = require('realize/mixins/localized_resource_field_mixin.jsx');
 
@@ -111921,13 +111979,13 @@ window.TableHeader = React.createClass({
   mixins: [CssClassMixin, LocalizedResourceFieldMixin],
 
   propTypes: {
-    name: React.PropTypes.string,
+    name: PropTypes.string,
     label: Realize.PropTypes.localizedString,
-    format: React.PropTypes.oneOf(['text', 'currency', 'number', 'percentage', 'boolean', 'date', 'datetime', 'time']),
-    sortable: React.PropTypes.bool,
-    sortDirection: React.PropTypes.string,
-    sortFieldName: React.PropTypes.string,
-    onSort: React.PropTypes.func
+    format: PropTypes.oneOf(['text', 'currency', 'number', 'percentage', 'boolean', 'date', 'datetime', 'time']),
+    sortable: PropTypes.bool,
+    sortDirection: PropTypes.string,
+    sortFieldName: PropTypes.string,
+    onSort: PropTypes.func
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -112025,12 +112083,13 @@ window.TableHeader = React.createClass({
 });
 
 }).call(this,require("react"),require("realize/realize.js"))
-},{"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/localized_resource_field_mixin.jsx":708,"realize/realize.js":717}],683:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/localized_resource_field_mixin.jsx":708,"realize/realize.js":717}],683:[function(require,module,exports){
 (function (React){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.TableRow = React.createClass({
@@ -112039,17 +112098,17 @@ window.TableRow = React.createClass({
   mixins: [CssClassMixin],
 
   propTypes: {
-    columns: React.PropTypes.object,
-    data: React.PropTypes.object,
-    dataRowIdField: React.PropTypes.string,
-    selectable: React.PropTypes.oneOf(['multiple', 'none', 'one']),
-    selected: React.PropTypes.bool,
-    actionButtons: React.PropTypes.array,
-    rowSelectableFilter: React.PropTypes.func,
-    onSelectToggle: React.PropTypes.func,
-    onClickRow: React.PropTypes.func,
-    rowHref: React.PropTypes.string,
-    tableRowCssClass: React.PropTypes.func
+    columns: PropTypes.object,
+    data: PropTypes.object,
+    dataRowIdField: PropTypes.string,
+    selectable: PropTypes.oneOf(['multiple', 'none', 'one']),
+    selected: PropTypes.bool,
+    actionButtons: PropTypes.array,
+    rowSelectableFilter: PropTypes.func,
+    onSelectToggle: PropTypes.func,
+    onClickRow: PropTypes.func,
+    rowHref: PropTypes.string,
+    tableRowCssClass: PropTypes.func
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -112177,12 +112236,13 @@ window.TableRow = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411,"realize/mixins/css_class_mixin.jsx":697}],684:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697}],684:[function(require,module,exports){
 (function (React){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var RequestHandlerMixin = require('realize/mixins/request_handler_mixin.jsx');
 
@@ -112192,15 +112252,15 @@ window.TableRowActionButton = React.createClass({
   mixins: [CssClassMixin, RequestHandlerMixin],
 
   propTypes: {
-    data: React.PropTypes.object,
-    dataRowIdField: React.PropTypes.string,
-    count: React.PropTypes.number,
-    actionUrl: React.PropTypes.string,
-    method: React.PropTypes.string,
-    disabled: React.PropTypes.bool,
-    conditionToShowActionButton: React.PropTypes.func,
-    component: React.PropTypes.string,
-    element: React.PropTypes.string
+    data: PropTypes.object,
+    dataRowIdField: PropTypes.string,
+    count: PropTypes.number,
+    actionUrl: PropTypes.string,
+    method: PropTypes.string,
+    disabled: PropTypes.bool,
+    conditionToShowActionButton: PropTypes.func,
+    component: PropTypes.string,
+    element: PropTypes.string
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -112302,12 +112362,13 @@ window.TableRowActionButton = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/request_handler_mixin.jsx":710}],685:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/request_handler_mixin.jsx":710}],685:[function(require,module,exports){
 (function (React){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var RequestHandlerMixin = require('realize/mixins/request_handler_mixin.jsx');
 
@@ -112317,12 +112378,12 @@ window.TableRowActions = React.createClass({
   mixins: [CssClassMixin, RequestHandlerMixin],
 
   propTypes: {
-    data: React.PropTypes.object,
-    dataRowIdField: React.PropTypes.string,
-    actionButtons: React.PropTypes.array,
-    conditionParams: React.PropTypes.object,
-    component: React.PropTypes.string,
-    paramsToComponent: React.PropTypes.object
+    data: PropTypes.object,
+    dataRowIdField: PropTypes.string,
+    actionButtons: PropTypes.array,
+    conditionParams: PropTypes.object,
+    component: PropTypes.string,
+    paramsToComponent: PropTypes.object
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -112364,10 +112425,11 @@ window.TableRowActions = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/request_handler_mixin.jsx":710}],686:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/request_handler_mixin.jsx":710}],686:[function(require,module,exports){
 (function (React){
 'use strict';
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var UtilsMixin = require('realize/mixins/utils_mixin.jsx');
 
@@ -112377,11 +112439,11 @@ window.TableSelectCell = React.createClass({
   mixins: [CssClassMixin, UtilsMixin],
 
   propTypes: {
-    rowId: React.PropTypes.string,
-    cellElement: React.PropTypes.string,
-    dataRowIds: React.PropTypes.array,
-    selected: React.PropTypes.bool,
-    onSelectToggle: React.PropTypes.func
+    rowId: PropTypes.string,
+    cellElement: PropTypes.string,
+    dataRowIds: PropTypes.array,
+    selected: PropTypes.bool,
+    onSelectToggle: PropTypes.func
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -112411,10 +112473,11 @@ window.TableSelectCell = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/utils_mixin.jsx":713}],687:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/utils_mixin.jsx":713}],687:[function(require,module,exports){
 (function (React,Realize){
 'use strict';
 
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.TableSelectionIndicator = React.createClass({
@@ -112423,19 +112486,19 @@ window.TableSelectionIndicator = React.createClass({
   mixins: [CssClassMixin],
 
   propTypes: {
-    dataRows: React.PropTypes.array,
-    selectedRowIds: React.PropTypes.array,
-    actionButtons: React.PropTypes.array,
-    message: React.PropTypes.object,
+    dataRows: PropTypes.array,
+    selectedRowIds: PropTypes.array,
+    actionButtons: PropTypes.array,
+    message: PropTypes.object,
     removeSelectionButtonName: Realize.PropTypes.localizedString,
-    selectable: React.PropTypes.oneOf(['multiple', 'none', 'one']),
+    selectable: PropTypes.oneOf(['multiple', 'none', 'one']),
     selectAllButtonName: Realize.PropTypes.localizedString,
-    allSelected: React.PropTypes.bool,
-    count: React.PropTypes.number,
-    onRemoveSelection: React.PropTypes.func,
-    onSelectAll: React.PropTypes.func,
-    rowSelectableFilter: React.PropTypes.func,
-    forceShowSelectAllButton: React.PropTypes.bool
+    allSelected: PropTypes.bool,
+    count: PropTypes.number,
+    onRemoveSelection: PropTypes.func,
+    onSelectAll: PropTypes.func,
+    rowSelectableFilter: PropTypes.func,
+    forceShowSelectAllButton: PropTypes.bool
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -112545,11 +112608,12 @@ window.TableSelectionIndicator = React.createClass({
 });
 
 }).call(this,require("react"),require("realize/realize.js"))
-},{"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/realize.js":717}],688:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/css_class_mixin.jsx":697,"realize/realize.js":717}],688:[function(require,module,exports){
 (function (React){
 'use strict';
 
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
+var PropTypes = require('prop-types');
 var ContainerMixin = require('realize/mixins/container_mixin.jsx');
 
 window.Tab = React.createClass({
@@ -112558,7 +112622,7 @@ window.Tab = React.createClass({
   mixins: [CssClassMixin, ContainerMixin],
 
   propTypes: {
-    id: React.PropTypes.string
+    id: PropTypes.string
   },
 
   render: function render() {
@@ -112571,11 +112635,12 @@ window.Tab = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411,"realize/mixins/container_mixin.jsx":696,"realize/mixins/css_class_mixin.jsx":697}],689:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/container_mixin.jsx":696,"realize/mixins/css_class_mixin.jsx":697}],689:[function(require,module,exports){
 (function (React){
 'use strict';
 
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
+var PropTypes = require('prop-types');
 var ContainerMixin = require('realize/mixins/container_mixin.jsx');
 var FormContainerMixin = require('realize/mixins/form/form_container_mixin.jsx');
 
@@ -112585,9 +112650,9 @@ window.TabButton = React.createClass({
   mixins: [CssClassMixin, ContainerMixin, FormContainerMixin],
 
   propTypes: {
-    id: React.PropTypes.string,
-    title: React.PropTypes.string,
-    active: React.PropTypes.bool
+    id: PropTypes.string,
+    title: PropTypes.string,
+    active: PropTypes.bool
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -112614,13 +112679,14 @@ window.TabButton = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411,"realize/mixins/container_mixin.jsx":696,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/form/form_container_mixin.jsx":699}],690:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/container_mixin.jsx":696,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/form/form_container_mixin.jsx":699}],690:[function(require,module,exports){
 (function (React,ReactDOM){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
+var PropTypes = require('prop-types');
 var ContainerMixin = require('realize/mixins/container_mixin.jsx');
 
 window.Tabs = React.createClass({
@@ -112629,9 +112695,9 @@ window.Tabs = React.createClass({
   mixins: [CssClassMixin, ContainerMixin],
 
   propTypes: {
-    themeClassKey: React.PropTypes.string,
-    className: React.PropTypes.string,
-    activeTab: React.PropTypes.number
+    themeClassKey: PropTypes.string,
+    className: PropTypes.string,
+    activeTab: PropTypes.number
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -112676,7 +112742,7 @@ window.Tabs = React.createClass({
 });
 
 }).call(this,require("react"),require("react-dom"))
-},{"react":411,"react-dom":402,"realize/mixins/container_mixin.jsx":696,"realize/mixins/css_class_mixin.jsx":697}],691:[function(require,module,exports){
+},{"prop-types":353,"react":411,"react-dom":402,"realize/mixins/container_mixin.jsx":696,"realize/mixins/css_class_mixin.jsx":697}],691:[function(require,module,exports){
 'use strict';
 
 module.exports = exports = {};

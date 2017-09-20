@@ -1,3 +1,4 @@
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var InputComponentMixin = require('realize/mixins/input/input_component_mixin.jsx');
 var CheckboxComponentMixin = require('realize/mixins/input/checkbox_component_mixin.jsx');
@@ -10,7 +11,7 @@ window.InputSwitch = React.createClass({
   ],
 
   propTypes: {
-    label: React.PropTypes.string,
+    label: PropTypes.string,
     offLabel: Realize.PropTypes.localizedString,
     onLabel: Realize.PropTypes.localizedString
   },

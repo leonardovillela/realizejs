@@ -1,3 +1,4 @@
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var InputComponentMixin = require('realize/mixins/input/input_component_mixin.jsx');
 var SelectComponentMixin = require('realize/mixins/input/select_component_mixin.jsx');
@@ -14,7 +15,7 @@ window.InputSelect = React.createClass({
   ],
 
   propTypes: {
-    includeBlank: React.PropTypes.bool,
+    includeBlank: PropTypes.bool,
     blankText: Realize.PropTypes.localizedString
   },
 

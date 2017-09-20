@@ -1,3 +1,4 @@
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var UtilsMixin = require('realize/mixins/utils_mixin.jsx');
 
@@ -5,19 +6,19 @@ window.BulkEditForm = React.createClass({
   mixins: [CssClassMixin, UtilsMixin],
 
   propTypes: {
-    inputs: React.PropTypes.object,
-    data: React.PropTypes.object,
-    action: React.PropTypes.string,
-    method: React.PropTypes.string,
-    dataType: React.PropTypes.string,
-    contentType: React.PropTypes.string,
-    style: React.PropTypes.string,
-    resource: React.PropTypes.string,
-    submitButton: React.PropTypes.object,
-    otherButtons: React.PropTypes.array,
-    isLoading: React.PropTypes.bool,
-    onSubmit: React.PropTypes.func,
-    onReset: React.PropTypes.func
+    inputs: PropTypes.object,
+    data: PropTypes.object,
+    action: PropTypes.string,
+    method: PropTypes.string,
+    dataType: PropTypes.string,
+    contentType: PropTypes.string,
+    style: PropTypes.string,
+    resource: PropTypes.string,
+    submitButton: PropTypes.object,
+    otherButtons: PropTypes.array,
+    isLoading: PropTypes.bool,
+    onSubmit: PropTypes.func,
+    onReset: PropTypes.func
   },
 
   getDefaultProps: function () {

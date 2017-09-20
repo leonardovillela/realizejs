@@ -1,3 +1,4 @@
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 var TooltipMixin = require('realize/mixins/tooltip_mixin.jsx');
 
@@ -5,7 +6,7 @@ window.Icon = React.createClass({
   mixins: [CssClassMixin, TooltipMixin],
 
   propTypes: {
-    type: React.PropTypes.string
+    type: PropTypes.string
   },
 
   getDefaultProps: function() {

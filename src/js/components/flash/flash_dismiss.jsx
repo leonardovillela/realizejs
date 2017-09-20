@@ -1,11 +1,12 @@
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.FlashDismiss = React.createClass({
   mixins: [CssClassMixin],
   propTypes: {
-    type: React.PropTypes.string,
-    text: React.PropTypes.string,
-    onClick: React.PropTypes.func
+    type: PropTypes.string,
+    text: PropTypes.string,
+    onClick: PropTypes.func
   },
 
   getInitialState: function() {

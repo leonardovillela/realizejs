@@ -1,20 +1,21 @@
+var PropTypes = require('prop-types');
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
 
 window.InputGridFormFields = React.createClass({
   mixins: [CssClassMixin],
 
   propTypes: {
-    id: React.PropTypes.string,
-    inputs: React.PropTypes.object,
-    data: React.PropTypes.object,
-    style: React.PropTypes.string,
-    resource: React.PropTypes.string,
-    disabled: React.PropTypes.bool,
-    readOnly: React.PropTypes.bool,
-    submitButton: React.PropTypes.oneOfType([React.PropTypes.object, React.PropTypes.bool]),
-    otherButtons: React.PropTypes.array,
-    onSubmit: React.PropTypes.func,
-    onReset: React.PropTypes.func
+    id: PropTypes.string,
+    inputs: PropTypes.object,
+    data: PropTypes.object,
+    style: PropTypes.string,
+    resource: PropTypes.string,
+    disabled: PropTypes.bool,
+    readOnly: PropTypes.bool,
+    submitButton: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
+    otherButtons: PropTypes.array,
+    onSubmit: PropTypes.func,
+    onReset: PropTypes.func
   },
 
   getInitialState: function() {

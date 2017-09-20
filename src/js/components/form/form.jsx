@@ -1,4 +1,5 @@
 var CssClassMixin = require('realize/mixins/css_class_mixin.jsx');
+var PropTypes = require('prop-types');
 var ContainerMixin = require('realize/mixins/container_mixin.jsx');
 var FormErrorHandlerMixin = require('realize/mixins/form/form_error_handler_mixin.jsx');
 var FormSuccessHandlerMixin = require('realize/mixins/form/form_success_handler_mixin.jsx');
@@ -12,25 +13,25 @@ window.Form = React.createClass({
   ],
 
   propTypes: {
-    id: React.PropTypes.string,
-    inputs: React.PropTypes.object,
-    data: React.PropTypes.object,
-    action: React.PropTypes.string,
-    method: React.PropTypes.string,
-    dataType: React.PropTypes.string,
-    contentType: React.PropTypes.string,
-    multipart: React.PropTypes.bool,
-    style: React.PropTypes.string,
-    resource: React.PropTypes.string,
-    ajaxSubmit: React.PropTypes.bool,
-    isLoading: React.PropTypes.bool,
-    disabled: React.PropTypes.bool,
-    readOnly: React.PropTypes.bool,
-    inputWrapperComponent: React.PropTypes.oneOfType([React.PropTypes.func, React.PropTypes.element, React.PropTypes.string]),
-    submitButton: React.PropTypes.oneOfType([React.PropTypes.object, React.PropTypes.bool]),
-    otherButtons: React.PropTypes.array,
-    onSubmit: React.PropTypes.func,
-    onReset: React.PropTypes.func
+    id: PropTypes.string,
+    inputs: PropTypes.object,
+    data: PropTypes.object,
+    action: PropTypes.string,
+    method: PropTypes.string,
+    dataType: PropTypes.string,
+    contentType: PropTypes.string,
+    multipart: PropTypes.bool,
+    style: PropTypes.string,
+    resource: PropTypes.string,
+    ajaxSubmit: PropTypes.bool,
+    isLoading: PropTypes.bool,
+    disabled: PropTypes.bool,
+    readOnly: PropTypes.bool,
+    inputWrapperComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.element, PropTypes.string]),
+    submitButton: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
+    otherButtons: PropTypes.array,
+    onSubmit: PropTypes.func,
+    onReset: PropTypes.func
   },
 
   getDefaultProps: function() {
