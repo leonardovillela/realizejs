@@ -1,5 +1,5 @@
 /*!
- * Realize v0.8.39 (http://www.wkm.com.br)
+ * Realize v0.8.41 (http://www.wkm.com.br)
  * Copyright 2015-2017 
  */
 
@@ -103587,12 +103587,14 @@ window.IndexPermissions = React.createClass({
 (function (React){
 'use strict';
 
+var PropTypes = require('prop-types');
+
 window.LabelPermission = React.createClass({
   displayName: 'LabelPermission',
 
 
   PropTypes: {
-    className: React.PropTypes.string
+    className: PropTypes.string
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -103635,10 +103637,11 @@ window.LabelPermission = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411}],608:[function(require,module,exports){
+},{"prop-types":353,"react":411}],608:[function(require,module,exports){
 (function (React){
 'use strict';
 
+var PropTypes = require('prop-types');
 var RequestHandlerMixin = require('realize/mixins/request_handler_mixin.jsx');
 
 window.AclModalsWrapper = React.createClass({
@@ -103647,13 +103650,13 @@ window.AclModalsWrapper = React.createClass({
   mixins: [RequestHandlerMixin],
 
   PropTypes: {
-    principal: React.PropTypes.object,
-    principalType: React.PropTypes.string,
-    resource: React.PropTypes.object,
-    resourceType: React.PropTypes.string,
-    urlProps: React.PropTypes.object,
-    title: React.PropTypes.string,
-    reloadPageAfterSubmit: React.PropTypes.bool
+    principal: PropTypes.object,
+    principalType: PropTypes.string,
+    resource: PropTypes.object,
+    resourceType: PropTypes.string,
+    urlProps: PropTypes.object,
+    title: PropTypes.string,
+    reloadPageAfterSubmit: PropTypes.bool
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -103750,7 +103753,7 @@ window.AclModalsWrapper = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411,"realize/mixins/request_handler_mixin.jsx":710}],609:[function(require,module,exports){
+},{"prop-types":353,"react":411,"realize/mixins/request_handler_mixin.jsx":710}],609:[function(require,module,exports){
 (function (React){
 'use strict';
 
@@ -103764,12 +103767,12 @@ window.AddPrincipalsModal = React.createClass({
   mixins: [RequestHandlerMixin],
 
   PropTypes: {
-    resource: React.PropTypes.object,
-    resourceType: React.PropTypes.string,
-    className: React.PropTypes.string,
-    modalId: React.PropTypes.string,
-    potentialPrincipalsBaseUrl: React.PropTypes.string,
-    principalsTypeBaseUrl: React.PropTypes.string
+    resource: PropTypes.object,
+    resourceType: PropTypes.string,
+    className: PropTypes.string,
+    modalId: PropTypes.string,
+    potentialPrincipalsBaseUrl: PropTypes.string,
+    principalsTypeBaseUrl: PropTypes.string
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -103960,11 +103963,11 @@ window.CloseModalButton = React.createClass({
   displayName: 'CloseModalButton',
 
   PropTypes: {
-    name: React.PropTypes.string,
-    className: React.PropTypes.string,
-    clearTheme: React.PropTypes.bool,
-    element: React.PropTypes.string,
-    modalId: React.PropTypes.string
+    name: PropTypes.string,
+    className: PropTypes.string,
+    clearTheme: PropTypes.bool,
+    element: PropTypes.string,
+    modalId: PropTypes.string
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -104002,18 +104005,18 @@ window.PermissionManagerModal = React.createClass({
   mixins: [RequestHandlerMixin],
 
   PropTypes: {
-    permissionManagerInModal: React.PropTypes.bool,
-    principal: React.PropTypes.object,
-    principalType: React.PropTypes.string,
-    resource: React.PropTypes.object,
-    resourceType: React.PropTypes.string,
-    className: React.PropTypes.string,
-    modalId: React.PropTypes.string,
-    updatePermissionsBaseUrl: React.PropTypes.string,
-    principalsBaseUrl: React.PropTypes.string,
-    principalsPermissionsBaseUrl: React.PropTypes.string,
-    title: React.PropTypes.string,
-    reloadPageAfterSubmit: React.PropTypes.bool
+    permissionManagerInModal: PropTypes.bool,
+    principal: PropTypes.object,
+    principalType: PropTypes.string,
+    resource: PropTypes.object,
+    resourceType: PropTypes.string,
+    className: PropTypes.string,
+    modalId: PropTypes.string,
+    updatePermissionsBaseUrl: PropTypes.string,
+    principalsBaseUrl: PropTypes.string,
+    principalsPermissionsBaseUrl: PropTypes.string,
+    title: PropTypes.string,
+    reloadPageAfterSubmit: PropTypes.bool
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -104584,16 +104587,18 @@ window.PrincipalActionButtons = React.createClass({
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
+
 window.UpdatePermissionsButton = React.createClass({
   displayName: 'UpdatePermissionsButton',
 
 
   PropTypes: {
-    name: React.PropTypes.string,
-    className: React.PropTypes.string,
-    clearTheme: React.PropTypes.bool,
-    element: React.PropTypes.string,
-    handleUpdatePermissions: React.PropTypes.func
+    name: PropTypes.string,
+    className: PropTypes.string,
+    clearTheme: PropTypes.bool,
+    element: PropTypes.string,
+    handleUpdatePermissions: PropTypes.func
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -104617,7 +104622,7 @@ window.UpdatePermissionsButton = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411}],615:[function(require,module,exports){
+},{"prop-types":353,"react":411}],615:[function(require,module,exports){
 (function (React,Realize){
 'use strict';
 
@@ -106846,15 +106851,15 @@ window.HeaderButton = React.createClass({
 
 
   propTypes: {
-    imgSrc: React.PropTypes.string,
-    imgAlt: React.PropTypes.string,
-    icon: React.PropTypes.string,
-    iconAlign: React.PropTypes.string,
-    text: React.PropTypes.string,
-    href: React.PropTypes.string,
-    target: React.PropTypes.string,
-    onClick: React.PropTypes.func,
-    ref: React.PropTypes.string
+    imgSrc: PropTypes.string,
+    imgAlt: PropTypes.string,
+    icon: PropTypes.string,
+    iconAlign: PropTypes.string,
+    text: PropTypes.string,
+    href: PropTypes.string,
+    target: PropTypes.string,
+    onClick: PropTypes.func,
+    ref: PropTypes.string
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -106903,12 +106908,12 @@ window.HeaderMenu = React.createClass({
 
 
   propTypes: {
-    items: React.PropTypes.array,
-    leftIcon: React.PropTypes.string,
-    rightIcon: React.PropTypes.string,
-    text: React.PropTypes.string,
-    href: React.PropTypes.string,
-    ref_id: React.PropTypes.string
+    items: PropTypes.array,
+    leftIcon: PropTypes.string,
+    rightIcon: PropTypes.string,
+    text: PropTypes.string,
+    href: PropTypes.string,
+    ref_id: PropTypes.string
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -106965,12 +106970,14 @@ window.HeaderMenu = React.createClass({
 (function (React){
 'use strict';
 
+var PropTypes = require('prop-types');
+
 window.HeaderSection = React.createClass({
   displayName: 'HeaderSection',
 
   propTypes: {
-    align: React.PropTypes.string,
-    id: React.PropTypes.string
+    align: PropTypes.string,
+    id: PropTypes.string
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -107001,7 +107008,7 @@ window.HeaderSection = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411}],634:[function(require,module,exports){
+},{"prop-types":353,"react":411}],634:[function(require,module,exports){
 (function (React,Realize){
 'use strict';
 
@@ -107056,15 +107063,17 @@ window.Icon = React.createClass({
 (function (React){
 'use strict';
 
+var PropTypes = require('prop-types');
+
 window.Spinner = React.createClass({
   displayName: 'Spinner',
 
 
   propTypes: {
-    size: React.PropTypes.string,
-    color: React.PropTypes.string,
-    active: React.PropTypes.bool,
-    className: React.PropTypes.string
+    size: PropTypes.string,
+    color: PropTypes.string,
+    active: PropTypes.bool,
+    className: PropTypes.string
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -107120,7 +107129,7 @@ window.Spinner = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411}],636:[function(require,module,exports){
+},{"prop-types":353,"react":411}],636:[function(require,module,exports){
 (function (React,ReactDOM){
 'use strict';
 
@@ -107770,16 +107779,18 @@ window.InputAutocompleteSelect = React.createClass({
 }).call(this,require("react"),require("react-dom"),require("realize/realize.js"))
 },{"prop-types":353,"react":411,"react-dom":402,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/input/input_component_mixin.jsx":704,"realize/mixins/utils_mixin.jsx":713,"realize/realize.js":717}],641:[function(require,module,exports){
 (function (React){
-"use strict";
+'use strict';
+
+var PropTypes = require('prop-types');
 
 window.InputAutocompleteValues = React.createClass({
-  displayName: "InputAutocompleteValues",
+  displayName: 'InputAutocompleteValues',
 
   propTypes: {
-    id: React.PropTypes.string,
-    name: React.PropTypes.string,
-    multiple: React.PropTypes.bool,
-    selectedOptions: React.PropTypes.array
+    id: PropTypes.string,
+    name: PropTypes.string,
+    multiple: PropTypes.bool,
+    selectedOptions: PropTypes.array
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -107791,7 +107802,7 @@ window.InputAutocompleteValues = React.createClass({
 
   render: function render() {
     return React.createElement(
-      "select",
+      'select',
       {
         multiple: true,
         id: this.props.id,
@@ -107815,7 +107826,7 @@ window.InputAutocompleteValues = React.createClass({
 
     for (var i = 0; i < selectedOptions.length; i++) {
       var option = selectedOptions[i];
-      valueInputs.push(React.createElement("option", { value: option.value, key: option.name }));
+      valueInputs.push(React.createElement('option', { value: option.value, key: option.name }));
     }
 
     return valueInputs;
@@ -107832,7 +107843,7 @@ window.InputAutocompleteValues = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411}],642:[function(require,module,exports){
+},{"prop-types":353,"react":411}],642:[function(require,module,exports){
 (function (React){
 'use strict';
 
@@ -109971,19 +109982,21 @@ window.InputSelect = React.createClass({
 }).call(this,require("react"),require("react-dom"),require("realize/realize.js"))
 },{"prop-types":353,"react":411,"react-dom":402,"realize/mixins/css_class_mixin.jsx":697,"realize/mixins/input/input_component_mixin.jsx":704,"realize/mixins/input/input_select_actions_listener_mixin.jsx":705,"realize/mixins/input/materialize_select_mixin.jsx":706,"realize/mixins/input/select_component_mixin.jsx":707,"realize/realize.js":717}],663:[function(require,module,exports){
 (function (React){
-"use strict";
+'use strict';
+
+var PropTypes = require('prop-types');
 
 window.InputSelectOption = React.createClass({
-  displayName: "InputSelectOption",
+  displayName: 'InputSelectOption',
 
   propTypes: {
-    name: React.PropTypes.string,
-    value: React.PropTypes.node
+    name: PropTypes.string,
+    value: PropTypes.node
   },
 
   render: function render() {
     return React.createElement(
-      "option",
+      'option',
       { value: this.props.value },
       this.props.name
     );
@@ -109991,7 +110004,7 @@ window.InputSelectOption = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411}],664:[function(require,module,exports){
+},{"prop-types":353,"react":411}],664:[function(require,module,exports){
 (function (React){
 'use strict';
 
@@ -110065,14 +110078,16 @@ window.Label = React.createClass({
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
+
 // TODO: [DEPRECATION] Prop ref_id is deprecated, remember to remove it.
 window.Menu = React.createClass({
   displayName: 'Menu',
 
   propTypes: {
-    ref_id: React.PropTypes.string,
-    id: React.PropTypes.string,
-    items: React.PropTypes.array
+    ref_id: PropTypes.string,
+    id: PropTypes.string,
+    items: PropTypes.array
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -110111,24 +110126,26 @@ window.Menu = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411}],666:[function(require,module,exports){
+},{"prop-types":353,"react":411}],666:[function(require,module,exports){
 (function (React){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var PropTypes = require('prop-types');
+
 window.MenuItem = React.createClass({
   displayName: 'MenuItem',
 
   propTypes: {
-    icon: React.PropTypes.string,
-    iconAlign: React.PropTypes.string,
-    href: React.PropTypes.string,
-    target: React.PropTypes.string,
-    onClick: React.PropTypes.object,
-    className: React.PropTypes.string,
-    method: React.PropTypes.string,
-    element: React.PropTypes.string
+    icon: PropTypes.string,
+    iconAlign: PropTypes.string,
+    href: PropTypes.string,
+    target: PropTypes.string,
+    onClick: PropTypes.object,
+    className: PropTypes.string,
+    method: PropTypes.string,
+    element: PropTypes.string
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -110149,7 +110166,7 @@ window.MenuItem = React.createClass({
 });
 
 }).call(this,require("react"))
-},{"react":411}],667:[function(require,module,exports){
+},{"prop-types":353,"react":411}],667:[function(require,module,exports){
 (function (React,ReactDOM,Reflux){
 'use strict';
 
@@ -110677,15 +110694,17 @@ window.ModalHeader = React.createClass({
 (function (React,ReactDOM){
 'use strict';
 
+var PropTypes = require('prop-types');
+
 window.HeaderNotifications = React.createClass({
   displayName: 'HeaderNotifications',
 
   propTypes: {
-    ouSlug: React.PropTypes.string,
-    className: React.PropTypes.string,
-    text: React.PropTypes.string,
-    icon: React.PropTypes.string,
-    baseUrl: React.PropTypes.string
+    ouSlug: PropTypes.string,
+    className: PropTypes.string,
+    text: PropTypes.string,
+    icon: PropTypes.string,
+    baseUrl: PropTypes.string
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -110817,8 +110836,8 @@ var NotificationNumber = React.createClass({
   displayName: 'NotificationNumber',
 
   propTypes: {
-    className: React.PropTypes.string,
-    count: React.PropTypes.number
+    className: PropTypes.string,
+    count: PropTypes.number
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -110849,7 +110868,7 @@ var NotificationNumber = React.createClass({
 });
 
 }).call(this,require("react"),require("react-dom"))
-},{"react":411,"react-dom":402}],674:[function(require,module,exports){
+},{"prop-types":353,"react":411,"react-dom":402}],674:[function(require,module,exports){
 (function (React){
 'use strict';
 
@@ -113091,7 +113110,7 @@ var _isEqual = require('lodash/isEqual');
 
 window.ContainerMixin = {
   propTypes: {
-    forwardedProps: React.PropTypes.object
+    forwardedProps: PropTypes.object
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -113187,14 +113206,14 @@ module.exports = ContainerMixin;
 
 }).call(this,require("react"))
 },{"lodash/isEqual":175,"react":411}],697:[function(require,module,exports){
-(function (React,Realize){
+(function (Realize){
 'use strict';
 
 window.CssClassMixin = {
   propTypes: {
-    clearTheme: React.PropTypes.bool,
-    className: React.PropTypes.string,
-    themeClassKey: React.PropTypes.string
+    clearTheme: PropTypes.bool,
+    className: PropTypes.string,
+    themeClassKey: PropTypes.string
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -113246,17 +113265,16 @@ window.CssClassMixin = {
 
 module.exports = CssClassMixin;
 
-}).call(this,require("react"),require("realize/realize.js"))
-},{"react":411,"realize/realize.js":717}],698:[function(require,module,exports){
-(function (React){
+}).call(this,require("realize/realize.js"))
+},{"realize/realize.js":717}],698:[function(require,module,exports){
 "use strict";
 
 window.FormActionsListenerMixin = {
   propTypes: {
-    onFormSubmit: React.PropTypes.func,
-    onFormSuccess: React.PropTypes.func,
-    onFormError: React.PropTypes.func,
-    onFormReset: React.PropTypes.func
+    onFormSubmit: PropTypes.func,
+    onFormSuccess: PropTypes.func,
+    onFormError: PropTypes.func,
+    onFormReset: PropTypes.func
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -113324,15 +113342,14 @@ window.FormActionsListenerMixin = {
 
 module.exports = FormActionsListenerMixin;
 
-}).call(this,require("react"))
-},{"react":411}],699:[function(require,module,exports){
+},{}],699:[function(require,module,exports){
 (function (React,Realize){
 'use strict';
 
 window.FormContainerMixin = {
   propTypes: {
-    errors: React.PropTypes.oneOfType([React.PropTypes.object, React.PropTypes.array]),
-    errorThemeClassKey: React.PropTypes.string
+    errors: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+    errorThemeClassKey: PropTypes.string
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -113405,10 +113422,10 @@ module.exports = FormContainerMixin;
 
 window.FormErrorHandlerMixin = {
   propTypes: {
-    errorMessage: React.PropTypes.string,
-    baseErrorParam: React.PropTypes.string,
-    onError: React.PropTypes.func,
-    mapping: React.PropTypes.bool
+    errorMessage: PropTypes.string,
+    baseErrorParam: PropTypes.string,
+    onError: PropTypes.func,
+    mapping: PropTypes.bool
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -113513,8 +113530,8 @@ module.exports = FormErrorHandlerMixin;
 
 window.FormSuccessHandlerMixin = {
   propTypes: {
-    onSuccess: React.PropTypes.func,
-    successMessage: React.PropTypes.string
+    onSuccess: PropTypes.func,
+    successMessage: PropTypes.string
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -113561,7 +113578,6 @@ module.exports = FormSuccessHandlerMixin;
 
 }).call(this,require("react"))
 },{"react":411}],702:[function(require,module,exports){
-(function (React){
 'use strict';
 
 var _mergeWith = require('lodash/mergeWith');
@@ -113569,14 +113585,14 @@ var _isArray = require('lodash/isArray');
 
 window.GridActionsMixin = {
   propTypes: {
-    actionButtons: React.PropTypes.object,
-    rowHref: React.PropTypes.string,
-    haveShowAction: React.PropTypes.bool,
+    actionButtons: PropTypes.object,
+    rowHref: PropTypes.string,
+    haveShowAction: PropTypes.bool,
 
-    createActionButton: React.PropTypes.object,
-    showActionButton: React.PropTypes.object,
-    editActionButton: React.PropTypes.object,
-    destroyActionButton: React.PropTypes.object
+    createActionButton: PropTypes.object,
+    showActionButton: PropTypes.object,
+    editActionButton: PropTypes.object,
+    destroyActionButton: PropTypes.object
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -113673,15 +113689,14 @@ window.GridActionsMixin = {
 
 module.exports = GridActionsMixin;
 
-}).call(this,require("react"))
-},{"lodash/isArray":170,"lodash/mergeWith":190,"react":411}],703:[function(require,module,exports){
-(function (React,ReactDOM){
+},{"lodash/isArray":170,"lodash/mergeWith":190}],703:[function(require,module,exports){
+(function (ReactDOM){
 'use strict';
 
 window.CheckboxComponentMixin = {
   propTypes: {
-    checked: React.PropTypes.bool,
-    renderAsIndeterminate: React.PropTypes.bool
+    checked: PropTypes.bool,
+    renderAsIndeterminate: PropTypes.bool
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -113756,22 +113771,24 @@ window.CheckboxComponentMixin = {
 
 module.exports = CheckboxComponentMixin;
 
-}).call(this,require("react"),require("react-dom"))
-},{"react":411,"react-dom":402}],704:[function(require,module,exports){
-(function (React,ReactDOM,Realize){
+}).call(this,require("react-dom"))
+},{"react-dom":402}],704:[function(require,module,exports){
+(function (ReactDOM,Realize){
 'use strict';
+
+var PropTypes = require('prop-types');
 
 window.InputComponentMixin = {
   propTypes: {
-    id: React.PropTypes.string,
-    name: React.PropTypes.string,
-    value: React.PropTypes.any,
-    disabled: React.PropTypes.bool,
-    readOnly: React.PropTypes.bool,
+    id: PropTypes.string,
+    name: PropTypes.string,
+    value: PropTypes.any,
+    disabled: PropTypes.bool,
+    readOnly: PropTypes.bool,
     placeholder: Realize.PropTypes.localizedString,
-    errors: React.PropTypes.oneOfType([React.PropTypes.object, React.PropTypes.array]),
-    onChange: React.PropTypes.func,
-    onFocus: React.PropTypes.func
+    errors: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+    onChange: PropTypes.func,
+    onFocus: PropTypes.func
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -113881,8 +113898,8 @@ window.InputComponentMixin = {
 
 module.exports = InputComponentMixin;
 
-}).call(this,require("react"),require("react-dom"),require("realize/realize.js"))
-},{"react":411,"react-dom":402,"realize/realize.js":717}],705:[function(require,module,exports){
+}).call(this,require("react-dom"),require("realize/realize.js"))
+},{"prop-types":353,"react-dom":402,"realize/realize.js":717}],705:[function(require,module,exports){
 (function (Realize){
 "use strict";
 
@@ -114003,25 +114020,26 @@ module.exports = MaterializeSelectMixin;
 
 }).call(this,require("react-dom"))
 },{"react-dom":402}],707:[function(require,module,exports){
-(function (React,ReactDOM){
+(function (ReactDOM){
 'use strict';
 
+var PropTypes = require('prop-types');
 var utils = require('../../utils.js');
 var _map = require('lodash/map');
 
 window.SelectComponentMixin = {
   propTypes: {
-    options: React.PropTypes.array,
-    dependsOn: React.PropTypes.object,
-    optionsUrl: React.PropTypes.string,
-    optionsParam: React.PropTypes.string,
-    nameField: React.PropTypes.string,
-    valueField: React.PropTypes.string,
-    multiple: React.PropTypes.bool,
-    onLoad: React.PropTypes.func,
-    onLoadError: React.PropTypes.func,
-    onSelect: React.PropTypes.func,
-    requestTimeout: React.PropTypes.number
+    options: PropTypes.array,
+    dependsOn: PropTypes.object,
+    optionsUrl: PropTypes.string,
+    optionsParam: PropTypes.string,
+    nameField: PropTypes.string,
+    valueField: PropTypes.string,
+    multiple: PropTypes.bool,
+    onLoad: PropTypes.func,
+    onLoadError: PropTypes.func,
+    onSelect: PropTypes.func,
+    requestTimeout: PropTypes.number
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -114266,15 +114284,17 @@ window.SelectComponentMixin = {
 
 module.exports = SelectComponentMixin;
 
-}).call(this,require("react"),require("react-dom"))
-},{"../../utils.js":725,"lodash/map":186,"react":411,"react-dom":402}],708:[function(require,module,exports){
-(function (React,Realize){
+}).call(this,require("react-dom"))
+},{"../../utils.js":725,"lodash/map":186,"prop-types":353,"react-dom":402}],708:[function(require,module,exports){
+(function (Realize){
 'use strict';
+
+var PropTypes = require('prop-types');
 
 window.LocalizedResourceFieldMixin = {
   propTypes: {
-    resource: React.PropTypes.string,
-    name: React.PropTypes.string
+    resource: PropTypes.string,
+    name: PropTypes.string
   },
 
   localizeResourceField: function localizeResourceField(name, resource) {
@@ -114306,14 +114326,15 @@ window.LocalizedResourceFieldMixin = {
 
 module.exports = LocalizedResourceFieldMixin;
 
-}).call(this,require("react"),require("realize/realize.js"))
-},{"react":411,"realize/realize.js":717}],709:[function(require,module,exports){
-(function (React){
+}).call(this,require("realize/realize.js"))
+},{"prop-types":353,"realize/realize.js":717}],709:[function(require,module,exports){
 "use strict";
+
+var PropTypes = require('prop-types');
 
 window.ModalRendererMixin = {
   propTypes: {
-    modalContainerId: React.PropTypes.string
+    modalContainerId: PropTypes.string
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -114337,17 +114358,17 @@ window.ModalRendererMixin = {
 
 module.exports = ModalRendererMixin;
 
-}).call(this,require("react"))
-},{"react":411}],710:[function(require,module,exports){
-(function (React){
+},{"prop-types":353}],710:[function(require,module,exports){
 'use strict';
+
+var PropTypes = require('prop-types');
 
 window.RequestHandlerMixin = {
   propTypes: {
-    onRequest: React.PropTypes.func,
-    onSuccess: React.PropTypes.func,
-    onError: React.PropTypes.func,
-    onComplete: React.PropTypes.func
+    onRequest: PropTypes.func,
+    onSuccess: PropTypes.func,
+    onError: PropTypes.func,
+    onComplete: PropTypes.func
   },
 
   current_xhr: null,
@@ -114451,18 +114472,18 @@ window.RequestHandlerMixin = {
 
 module.exports = RequestHandlerMixin;
 
-}).call(this,require("react"))
-},{"react":411}],711:[function(require,module,exports){
-(function (React,Realize){
+},{"prop-types":353}],711:[function(require,module,exports){
+(function (Realize){
 'use strict';
 
+var PropTypes = require('prop-types');
 var _merge = require('lodash/merge');
 
 window.RestActionsMixin = {
   propTypes: {
-    actionUrls: React.PropTypes.object,
-    actionMethods: React.PropTypes.object,
-    destroyConfirm: React.PropTypes.node
+    actionUrls: PropTypes.object,
+    actionMethods: PropTypes.object,
+    destroyConfirm: PropTypes.node
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -114513,16 +114534,17 @@ window.RestActionsMixin = {
 
 module.exports = RestActionsMixin;
 
-}).call(this,require("react"),require("realize/realize.js"))
-},{"lodash/merge":189,"react":411,"realize/realize.js":717}],712:[function(require,module,exports){
-(function (React){
+}).call(this,require("realize/realize.js"))
+},{"lodash/merge":189,"prop-types":353,"realize/realize.js":717}],712:[function(require,module,exports){
 'use strict';
+
+var PropTypes = require('prop-types');
 
 window.TooltipMixin = {
   propTypes: {
-    tooltipDelay: React.PropTypes.number,
-    tooltipText: React.PropTypes.string,
-    tooltipPosition: React.PropTypes.oneOf(['bottom', 'top', 'left', 'right'])
+    tooltipDelay: PropTypes.number,
+    tooltipText: PropTypes.string,
+    tooltipPosition: PropTypes.oneOf(['bottom', 'top', 'left', 'right'])
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -114565,8 +114587,7 @@ window.TooltipMixin = {
 
 module.exports = TooltipMixin;
 
-}).call(this,require("react"))
-},{"react":411}],713:[function(require,module,exports){
+},{"prop-types":353}],713:[function(require,module,exports){
 'use strict';
 
 window.UtilsMixin = {
