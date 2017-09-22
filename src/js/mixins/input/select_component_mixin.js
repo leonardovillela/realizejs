@@ -2,9 +2,11 @@ import ReactDOM from 'react-dom';
 import PropTypes from '../../prop_types';
 import $ from 'jquery';
 
+import Realize from '../../realize';
+
 import { getProp } from '../../utils';
 import { autobind } from '../../utils/decorators';
-import { map } from 'lodash';
+import { map, debounce } from 'lodash';
 
 export default {
   propTypes: {
@@ -30,6 +32,7 @@ export default {
       options: [],
       multiple: false,
       onSelect: null,
+      loadParams: {},
       onLoad() { return true; },
       onLoadError(_, __, error) { console.log(`Select Load error: ${error}`); },
       requestTimeout: 300,
@@ -44,7 +47,7 @@ export default {
       mustDisable: false,
       loadParams: this.props.loadParams,
       loadData: [],
-      hasPendingRequest: false,
+      loadDebounced: debounce(this._loadOptions, this.props.requestTimeout).bind(this),
     };
   },
 
@@ -103,39 +106,26 @@ export default {
   },
 
   loadOptions() {
-    this.state.hasPendingRequest = true;
-    var requestTime = new Date().getTime();
-    var timeout = 0;
+    this.state.loadDebounced();
+  },
 
-    if (!!this.state.xhr && this.state.xhr.readyState != 4)
-      this.state.xhr.abort();
+  _loadOptions() {
+    const { optionsUrl } = this.props;
+    const { loadParams } = this.state;
+    const { httpClient } = Realize.config;
 
-    if (!!this.state.lastXhrRequestTime)
-      timeout = this.props.requestTimeout;
+    const promise = httpClient(optionsUrl, { method: 'GET', params: loadParams, dataType: 'json' });
 
-    if (!!this.state.lastXhrRequestTime &&
-        ((this.state.lastXhrRequestTime + timeout) > requestTime))
-      clearTimeout(this.state.xhrTimer);
-
-    var context = this;
-    this.state.xhrTimer = setTimeout(function () {
-      context.state.xhr = $.ajax({
-        url: context.props.optionsUrl,
-        method: 'GET',
-        dataType: 'json',
-        data: context.state.loadParams,
-        success: context.handleLoad.bind(this),
-        error: context.handleLoadError.bind(this)
-      });
-    }.bind(this), timeout);
-
-    this.state.lastXhrRequestTime = requestTime;
+    promise
+      .then(this.handleLoad.bind(this))
+      .catch(this.props.onLoadError.bind(this));
   },
 
   handleLoad(data) {
     var options = [];
-    var optionsParam = this.props.optionsParam;
-    if(!!optionsParam) {
+    const { optionsParam } = this.props;
+
+    if (!!optionsParam) {
       data = getProp(optionsParam, data);
     }
 
@@ -156,13 +146,7 @@ export default {
       mustDisable: (!!this.props.dependsOn && options.length <= 0)
     }, this.triggerDependableChanged);
 
-    this.state.hasPendingRequest = false;
     this.props.onLoad(data);
-  },
-
-  handleLoadError (xhr, status, error) {
-    this.state.hasPendingRequest = false;
-    this.props.onLoadError(xhr, status, error);
   },
 
   cacheOptions (options) {
