@@ -9,6 +9,8 @@ import { Form } from '../form';
 
 import { CssClassMixin, RestActionsMixin } from '../../mixins';
 
+import { parse } from './grid_form_inputs_paser';
+
 @mixin(CssClassMixin, RestActionsMixin)
 export default class GridForm extends Component {
   static propTypes = {
@@ -140,13 +142,11 @@ export default class GridForm extends Component {
   }
 
   getFormInputs() {
-    const { clientSide, clientSideIdField } = this.props;
-    const { inputs: formInputs } = this.props.form;
-    if (clientSide) {
-      formInputs[clientSideIdField] = { component: 'hidden' };
-    }
+    const { clientSide, clientSideIdField, form } = this.props;
+    const clientSideIdFieldProps = clientSide ? { [clientSideIdField]: { component: 'hidden' } } : {};
+    const parsedFormInputs = parse(form.inputs);
 
-    return formInputs;
+    return Object.assign({}, parsedFormInputs, clientSideIdFieldProps);
   }
 
   getActionButtons() {

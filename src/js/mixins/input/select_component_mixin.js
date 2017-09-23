@@ -6,7 +6,7 @@ import Realize from '../../realize';
 
 import { getProp } from '../../utils';
 import { autobind } from '../../utils/decorators';
-import { map, debounce } from 'lodash';
+import { map, debounce, find } from 'lodash';
 
 export default {
   propTypes: {
@@ -21,6 +21,7 @@ export default {
     onLoadError: PropTypes.func,
     onSelect: PropTypes.func,
     requestTimeout: PropTypes.number,
+    serializeOnlyValue: PropTypes.bool,
   },
 
   getDefaultProps() {
@@ -36,6 +37,7 @@ export default {
       onLoad() { return true; },
       onLoadError(_, __, error) { console.log(`Select Load error: ${error}`); },
       requestTimeout: 300,
+      serializeOnlyValue: true,
     };
   },
 
@@ -229,7 +231,7 @@ export default {
     this.setState(newState);
   },
 
-  isDisabled () {
+  isDisabled() {
     return this.state.disabled || this.state.mustDisable;
   },
 
@@ -244,7 +246,13 @@ export default {
       : value;
   },
 
+  getSelectedOption() {
+    return find(this.props.options, option => option.value === this.getSelectValue());
+  },
+
   serialize() {
-    return { [this.props.name]: this.getSelectValue() };
+    return !this.props.serializeOnlyValue && !this.props.multiple
+      ? { [this.props.name]: this.getSelectedOption() }
+      : { [this.props.name]: this.getSelectValue() };
   },
 };

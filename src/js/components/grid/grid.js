@@ -263,7 +263,25 @@ export default class Grid extends Component {
   /* Serializing */
 
   serialize() {
-    return this.state.dataRows;
+    return this.state.dataRows.map(this.serializeDataRow);
+  }
+
+  serializeDataRow(dataRow) {
+    return Object.entries(this.props.columns)
+      .map((columnKey, columnProps) => ({ [columnKey]: this.serializeDataRowColumn(columnProps, dataRow[columnKey]) }));
+  }
+
+  serializeDataRowColumn(columnProps, value) {
+    switch (columnProps.format) {
+      case 'autocomplete':
+        return this.serializeColumnFormatAutocompleteValue(value);
+      default:
+        return value;
+    }
+  }
+
+  serializeColumnFormatAutocompleteValue(option) {
+    return option.value;
   }
 
   reconfigureGrid(config = {}, resetSelection = false) {
@@ -434,3 +452,4 @@ export default class Grid extends Component {
     );
   }
 }
+|

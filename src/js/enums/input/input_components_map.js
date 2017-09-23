@@ -1,3 +1,5 @@
+import InputsType from './inputs_type';
+
 import InputAutocomplete from '../../components/input/autocomplete/input_autocomplete';
 import InputCheckbox from '../../components/input/checkbox/input_checkbox';
 import InputCheckboxGroup from '../../components/input/checkbox/input_checkbox_group';
@@ -17,21 +19,21 @@ import InputText from '../../components/input/input_text';
 import InputTextarea from '../../components/input/input_textarea';
 
 export default {
-  text: InputText,
-  autocomplete: InputAutocomplete,
-  checkbox: InputCheckbox,
-  colorpicker: InputColorpicker,
-  datefilter: InputDatefilter,
-  datepicker: InputDatepicker,
-  number: InputNumber,
-  file: InputFile,
-  gridform: InputGridForm,
-  hidden: InputHidden,
-  password: InputPassword,
-  select: InputSelect,
-  switch: InputSwitch,
-  textarea: InputTextarea,
-  checkbox_group: InputCheckboxGroup,
-  radio_group: InputRadioGroup,
-  masked: InputMasked,
+  [InputsType.TEXT]: InputText,
+  [InputsType.AUTOCOMPLETE]: InputAutocomplete,
+  [InputsType.CHECKBOX]: InputCheckbox,
+  [InputsType.COLORPICKER]: InputColorpicker,
+  [InputsType.DATEFILTER]: InputDatefilter,
+  [InputsType.DATEPICKER]: InputDatepicker,
+  [InputsType.NUMBER]: InputNumber,
+  [InputsType.FILE]: InputFile,
+  [InputsType.GRIDFORM]: InputGridForm,
+  [InputsType.HIDDEN]: InputHidden,
+  [InputsType.PASSWORD]: InputPassword,
+  [InputsType.SELECT]: InputSelect,
+  [InputsType.SWITCH]: InputSwitch,
+  [InputsType.TEXTAREA]: InputTextarea,
+  [InputsType.CHECKBOX_GROUP]: InputCheckboxGroup,
+  [InputsType.RADIO_GROUP]: InputRadioGroup,
+  [InputsType.MASKED]: InputMasked,
 };

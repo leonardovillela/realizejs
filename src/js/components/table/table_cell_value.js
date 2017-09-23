@@ -28,6 +28,8 @@ export default class TableCellValue extends Component {
 
   getValueFormatter() {
     switch (this.props.format) {
+      case 'autocomplete':
+        return this.autocompleteValue;
       case 'currency':
       case 'number':
         return this.numberValue;
@@ -45,6 +47,10 @@ export default class TableCellValue extends Component {
       default:
         return this.textValue;
     }
+  }
+
+  autocompleteValue(option) {
+    return option.name;
   }
 
   textValue(value) {
@@ -104,7 +110,7 @@ export default class TableCellValue extends Component {
   }
 
   renderFormattedValue(value) {
-    const valueFormatter = this.getValueFormatter().bind(this);
+    const valueFormatter =  this.getValueFormatter().bind(this);
     return (
       !_.isEmpty(value) ||
       typeof value === 'boolean' ||
