@@ -1,6 +1,6 @@
 import { InputsType } from '../../enums';
 
-function parseInput(inputKey, inputProps) {
+function parseInput([inputKey, inputProps]) {
   switch (inputProps.component) {
     case InputsType.AUTOCOMPLETE:
       return { [inputKey]: Object.assign({ serializeOnlyValue: false }, inputProps) };

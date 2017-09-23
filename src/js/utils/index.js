@@ -6,7 +6,7 @@ export const getProp = (key, obj) => {
   const keyArr = key.split('.');
   let prop = obj;
 
-  try {|
+  try {
     while (keyArr.length > 0) {
       prop = prop[keyArr.shift()];
     }
