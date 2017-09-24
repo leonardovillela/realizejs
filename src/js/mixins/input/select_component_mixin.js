@@ -247,7 +247,7 @@ export default {
   },
 
   getSelectedOption() {
-    return find(this.props.options, option => option.value === this.getSelectValue());
+    return find(this.state.options, option => option.value === this.getSelectValue());
   },
 
   serialize() {

@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 
-import { mixin } from '../../utils/decorators';
+import { mixin, autobind } from '../../utils/decorators';
 import { getProp } from '../../utils';
 import { setState } from '../../utils/react';
-import { autobind } from '../../utils/decorators';
-import { isEmpty } from 'lodash';
+import _, { isEmpty } from 'lodash';
 
 import PropTypes from '../../prop_types';
 import Realize from '../../realize';
@@ -263,12 +262,15 @@ export default class Grid extends Component {
   /* Serializing */
 
   serialize() {
-    return this.state.dataRows.map(this.serializeDataRow);
+    return this.state.dataRows.map(dataRow => this.serializeDataRow(dataRow));
   }
 
   serializeDataRow(dataRow) {
-    return Object.entries(this.props.columns)
-      .map((columnKey, columnProps) => ({ [columnKey]: this.serializeDataRowColumn(columnProps, dataRow[columnKey]) }));
+    return _.chain(this.props.columns)
+      .entries()
+      .map(([columnKey, columnProps]) => [columnKey, this.serializeDataRowColumn(columnProps, dataRow[columnKey])])
+      .fromPairs()
+      .value();
   }
 
   serializeDataRowColumn(columnProps, value) {

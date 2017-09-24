@@ -1,4 +1,5 @@
 export default [
+  'autocomplete',
   'text',
   'currency',
   'number',
