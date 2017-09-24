@@ -24,5 +24,3 @@ Desktop.ini
 *.lnk
 
 # Transpiled bundle to publish in NPM
-build
-dist
