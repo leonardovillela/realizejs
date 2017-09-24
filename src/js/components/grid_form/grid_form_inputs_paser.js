@@ -1,14 +1,17 @@
 import { InputsType } from '../../enums';
 
+import { fromPairs } from 'lodash';
+
 function parseInput([inputKey, inputProps]) {
   switch (inputProps.component) {
     case InputsType.AUTOCOMPLETE:
-      return { [inputKey]: Object.assign({ serializeOnlyValue: false }, inputProps) };
+      return [inputKey, Object.assign({ serializeOnlyValue: false }, inputProps)];
     default:
-      return { [inputKey]: inputProps };
+      return [inputKey, inputProps];
   }
 }
 
 export function parse(inputs) {
-  return Object.entries(inputs).map(parseInput);
+  const parsedInputs = Object.entries(inputs).map(parseInput);
+  return fromPairs(parsedInputs);
 }
