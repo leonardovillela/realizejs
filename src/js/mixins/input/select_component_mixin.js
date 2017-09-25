@@ -232,7 +232,7 @@ export default {
   },
 
   isDisabled() {
-    return this.state.disabled || this.state.mustDisable;
+    return this.props.disabled || this.state.mustDisable;
   },
 
   /* Serializer functions */
