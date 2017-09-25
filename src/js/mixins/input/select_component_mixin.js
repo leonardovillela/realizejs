@@ -45,7 +45,6 @@ export default {
     return {
       options: this.props.options,
       optionsCache: this.props.options,
-      disabled: this.props.disabled,
       mustDisable: false,
       loadParams: this.props.loadParams,
       loadData: [],
