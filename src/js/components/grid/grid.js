@@ -283,7 +283,7 @@ export default class Grid extends Component {
   }
 
   serializeColumnFormatAutocompleteValue(option) {
-    return option.value;
+    return option && option.value;
   }
 
   reconfigureGrid(config = {}, resetSelection = false) {
