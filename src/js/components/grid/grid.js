@@ -43,7 +43,7 @@ export default class Grid extends Component {
     columns: PropTypes.object,
     data: PropTypes.object,
     emptyMessage: PropTypes.localizedString,
-    dataRowsParam: PropTypes.string,
+    dataRowsParam: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
     countParam: PropTypes.string,
     selectedRowIds: PropTypes.array,
     selectedRowIdsParam: PropTypes.string,
@@ -190,8 +190,8 @@ export default class Grid extends Component {
   }
 
   handleLoad(data) {
-    const dataRows = getProp(this.props.dataRowsParam, data);
-    const count = getProp(this.props.countParam, data);
+    const dataRows = this.props.dataRowsParam ? getProp(this.props.dataRowsParam, data) : data;
+    const count = this.props.pagination ? getProp(this.props.countParam, data) : dataRows.length;
     const loadedState = {
       gridIsLoading: false,
       dataRows,
