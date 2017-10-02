@@ -19271,8 +19271,8 @@ var Grid = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__utils_deco
     value: function handleLoad(data) {
       var _this4 = this;
 
-      var dataRows = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__utils__["getProp"])(this.props.dataRowsParam, data);
-      var count = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__utils__["getProp"])(this.props.countParam, data);
+      var dataRows = this.props.dataRowsParam ? __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__utils__["getProp"])(this.props.dataRowsParam, data) : data;
+      var count = this.props.pagination ? __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__utils__["getProp"])(this.props.countParam, data) : dataRows.length;
       var loadedState = {
         gridIsLoading: false,
         dataRows: dataRows,
@@ -19595,7 +19595,7 @@ var Grid = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__utils_deco
   columns: __WEBPACK_IMPORTED_MODULE_5__prop_types__["a" /* default */].object,
   data: __WEBPACK_IMPORTED_MODULE_5__prop_types__["a" /* default */].object,
   emptyMessage: __WEBPACK_IMPORTED_MODULE_5__prop_types__["a" /* default */].localizedString,
-  dataRowsParam: __WEBPACK_IMPORTED_MODULE_5__prop_types__["a" /* default */].string,
+  dataRowsParam: __WEBPACK_IMPORTED_MODULE_5__prop_types__["a" /* default */].oneOfType([__WEBPACK_IMPORTED_MODULE_5__prop_types__["a" /* default */].string, __WEBPACK_IMPORTED_MODULE_5__prop_types__["a" /* default */].bool]),
   countParam: __WEBPACK_IMPORTED_MODULE_5__prop_types__["a" /* default */].string,
   selectedRowIds: __WEBPACK_IMPORTED_MODULE_5__prop_types__["a" /* default */].array,
   selectedRowIdsParam: __WEBPACK_IMPORTED_MODULE_5__prop_types__["a" /* default */].string,
